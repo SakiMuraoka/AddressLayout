@@ -36,9 +36,6 @@ struct logView: View {
         }
     }
     
-    func addButtonAction(){
-        
-    }
 }
 
 struct logView_Previews: PreviewProvider {
