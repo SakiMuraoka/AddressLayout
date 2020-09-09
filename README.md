@@ -10,4 +10,5 @@
 縦書き横書きの切り替え
 
 ## DataBase
-Realm Dabase
+履歴データにはRealm Databaseを使用
+書類データはJSONを作成する
