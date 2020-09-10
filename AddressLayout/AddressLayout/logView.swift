@@ -9,8 +9,6 @@
 import SwiftUI
 
 struct logView: View {
-    var addressTitle: String
-    var envelopeType: String
     
     var body: some View {
         NavigationView {
@@ -29,7 +27,7 @@ struct logView: View {
                         Image(systemName: "slider.horizontal.3")
                     }
                 }
-                itemList(addressTitle: addressTitle, envelopeType: envelopeType)
+                itemList()
             }
             .navigationBarTitle("履歴画面")
             .padding()
@@ -40,6 +38,6 @@ struct logView: View {
 
 struct logView_Previews: PreviewProvider {
     static var previews: some View {
-        logView(addressTitle: "筑波大学事務", envelopeType: "定型郵便用")
+        logView()
     }
 }
