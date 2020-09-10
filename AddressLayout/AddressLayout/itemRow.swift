@@ -9,21 +9,23 @@
 import SwiftUI
 
 struct itemRow: View {
-    var addressTitle: String
-    var envelopeTypeName: String
+    var LogData: Log
     var body: some View {
         HStack{
             Image("envelope")
                 .resizable()
                 .frame(width: 50, height: 50)
             VStack(alignment: .leading) {
-                Text(addressTitle)
+                Text(LogData.receiver.address.prefecture + LogData.receiver.address.city)
                     .font(.headline)
                 HStack {
                     Text("封筒タイプ:")
                         .font(.subheadline)
-                    Text(envelopeTypeName)
+                    Text(LogData.envelopeType)
                         .font(.subheadline)
+                    Spacer()
+                    Text(String(LogData.dates.month) + "月" + String(LogData.dates.date) + "日")
+                        .font(.caption)
                 }
             }
             Spacer()
@@ -34,7 +36,7 @@ struct itemRow: View {
 
 struct itemRow_Previews: PreviewProvider {
     static var previews: some View {
-        itemRow(addressTitle: "筑波大学事務", envelopeTypeName: "定型郵便用")
+        itemRow(LogData: testLogData[0])
             .previewLayout(.fixed(width: 300, height: 70))
     }
 }
