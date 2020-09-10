@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Log: Codable, Identifiable {
+struct Log: Hashable, Codable, Identifiable {
     var id: Int
     var sender: Information
     var receiver: Information
@@ -16,21 +16,23 @@ struct Log: Codable, Identifiable {
     var dates: Dates
 }
 
-struct Information: Codable {
+struct Information: Hashable, Codable {
     var address: Address
     var name: String
 }
 
-struct Dates: Codable {
+struct Dates: Hashable, Codable {
     var year: Int
     var month: Int
     var date: Int
 }
 
-struct Address: Codable {
+struct Address: Hashable, Codable {
     var prefecture: String
     var city: String
     var number1: Int
     var number2: Int
     var number3: Int
+    var building: String
+    var roomNumber: Int
 }
