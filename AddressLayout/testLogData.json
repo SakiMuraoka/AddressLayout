@@ -2,23 +2,27 @@
     {
       "id":00001,
       "sender": {
-          "prefecture": "茨城県",
-          "city": "つくば市〇〇"
-          "number1": 0,
-          "number2": 0,
-          "number3": 0,
-          "building": "〇〇マンション",
-          "roomNumber": 0
+          "address": {
+              "prefecture": "茨城県",
+              "city": "つくば市〇〇"
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇マンション",
+              "roomNumber": 0
+          }
           "name": "山田 太郎"
       },
       "receiver": {
-          "prefecture": "茨城県",
-          "city": "つくば市〇〇"
-          "number1": 0,
-          "number2": 0,
-          "number3": 0,
-          "building": "〇〇マンション",
-          "roomNumber": 0
+          "address": {
+              "prefecture": "茨城県",
+              "city": "つくば市〇〇"
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇マンション",
+              "roomNumber": 0
+          }
           "name": "田中 花子"
       },
       "envelopType": "長形1号",
@@ -31,23 +35,27 @@
     {
       "id":00002,
       "sender": {
-          "prefecture": "茨城県",
-          "city": "つくば市〇〇"
-          "number1": 1,
-          "number2": 1,
-          "number3": 1,
-          "building": "〇〇マンション",
-          "roomNumber": 1
+          "address": {
+              "prefecture": "茨城県",
+              "city": "つくば市〇〇"
+              "number1": 1,
+              "number2": 1,
+              "number3": 1,
+              "building": "〇〇マンション",
+              "roomNumber": 1
+          }
           "name": "山田 花子"
       },
       "receiver": {
-          "prefecture": "茨城県",
-          "city": "つくば市〇〇"
-          "number1": 1,
-          "number2": 1,
-          "number3": 1,
-          "building": "〇〇マンション",
-          "roomNumber": 1
+          "addoress": {
+              "prefecture": "茨城県",
+              "city": "つくば市〇〇"
+              "number1": 1,
+              "number2": 1,
+              "number3": 1,
+              "building": "〇〇マンション",
+              "roomNumber": 1
+          }
           "name": "田中 太郎"
       },
       "envelopType": "長形2号",
