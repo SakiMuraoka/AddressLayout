@@ -25,6 +25,7 @@ struct itemRow: View {
                         .font(.subheadline)
                     Spacer()
                     Text(String(LogData.dates.month) + "月" + String(LogData.dates.date) + "日")
+                        .font(.caption)
                 }
             }
             Spacer()
