@@ -29,7 +29,7 @@ struct logView: View {
                 }
                 itemList()
             }
-            .navigationBarTitle("履歴画面")
+            .navigationBarTitle("履歴画面", displayMode: .inline)
             .padding()
         }
     }

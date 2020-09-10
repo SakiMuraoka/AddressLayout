@@ -11,9 +11,9 @@ import SwiftUI
 struct PreviewView: View {
     @State private var isReverse = false
     @State private var isActualDisplay = true
+    var logData: Log
     var body: some View {
         GeometryReader { bodyView in
-            NavigationView {
             //            NavigationLink(destination: nil)
                 VStack(alignment: .center) {
                     Picker("", selection: self.$isReverse){
@@ -70,10 +70,10 @@ struct PreviewView: View {
                         .padding(.trailing, 40.0)
                     }
                     .padding(.bottom, 30.0)
-                }
                 .padding(.top)
-                .navigationBarTitle(Text("プレビュー"), displayMode: .inline)
             }
+            .navigationBarTitle(Text("プレビュー"), displayMode: .inline)
+
         }
     }
 }
@@ -81,7 +81,7 @@ struct PreviewView: View {
 struct PreviewView_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(["iPhone SE (2nd generation)", "iPhone 11"], id: \.self) { deviceName in
-            PreviewView()
+            PreviewView(logData: testLogData[0])
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }
