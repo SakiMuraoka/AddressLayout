@@ -13,7 +13,9 @@ struct itemList: View {
     var body: some View {
         List {
             ForEach(testLogData) {LogData in
-                itemRow(LogData: LogData)
+                NavigationLink(destination: PreviewView(logData: LogData)) {
+                    itemRow(LogData: LogData)
+                }
             }
         }
     }
