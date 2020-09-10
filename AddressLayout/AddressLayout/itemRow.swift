@@ -10,7 +10,7 @@ import SwiftUI
 
 struct itemRow: View {
     var addressTitle: String
-    var envelopeType: String
+    var envelopeTypeName: String
     var body: some View {
         HStack{
             Image("envelope")
@@ -22,7 +22,7 @@ struct itemRow: View {
                 HStack {
                     Text("封筒タイプ:")
                         .font(.subheadline)
-                    Text(envelopeType)
+                    Text(envelopeTypeName)
                         .font(.subheadline)
                 }
             }
@@ -34,7 +34,7 @@ struct itemRow: View {
 
 struct itemRow_Previews: PreviewProvider {
     static var previews: some View {
-        itemRow(addressTitle: "筑波大学事務", envelopeType: "定型郵便用")
+        itemRow(addressTitle: "筑波大学事務", envelopeTypeName: "定型郵便用")
             .previewLayout(.fixed(width: 300, height: 70))
     }
 }

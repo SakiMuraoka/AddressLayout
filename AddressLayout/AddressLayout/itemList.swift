@@ -13,9 +13,9 @@ struct itemList: View {
     var envelopeType: String
     var body: some View {
         List {
-            itemRow(addressTitle: addressTitle, envelopeType: envelopeType)
-            itemRow(addressTitle: addressTitle, envelopeType: envelopeType)
-            itemRow(addressTitle: addressTitle, envelopeType: envelopeType)
+            itemRow(addressTitle: addressTitle, envelopeTypeName: envelopeType)
+            itemRow(addressTitle: addressTitle, envelopeTypeName: envelopeType)
+            itemRow(addressTitle: addressTitle, envelopeTypeName: envelopeType)
         }
     }
 }
