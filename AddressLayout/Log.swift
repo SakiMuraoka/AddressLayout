@@ -29,6 +29,7 @@ struct Dates: Hashable, Codable {
 }
 
 struct Address: Hashable, Codable {
+    var zipcode: Int
     var prefecture: String
     var city: String
     var region: String
