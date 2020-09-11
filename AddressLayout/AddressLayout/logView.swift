@@ -14,7 +14,7 @@ struct logView: View {
         NavigationView {
             VStack {
                 HStack {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    NavigationLink(destination: InputView()){
                         Image(systemName: "plus")
                     }
                     Text("新規")
