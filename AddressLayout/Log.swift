@@ -12,8 +12,9 @@ struct Log: Hashable, Codable, Identifiable {
     var id: Int
     var sender: Information
     var receiver: Information
-    var envelopeType: String
+    var envelopeTypeId: Int
     var dates: Dates
+    var isOrganization: Bool
 }
 
 struct Information: Hashable, Codable {
@@ -30,6 +31,7 @@ struct Dates: Hashable, Codable {
 struct Address: Hashable, Codable {
     var prefecture: String
     var city: String
+    var region: String
     var number1: Int
     var number2: Int
     var number3: Int
