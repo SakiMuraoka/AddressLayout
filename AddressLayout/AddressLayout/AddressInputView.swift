@@ -36,7 +36,7 @@ struct AddressInputView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
             HStack{
-                Text("町")
+                Text("番地")
                 Spacer()
             }
             TextField("", text: $region)
@@ -47,7 +47,7 @@ struct AddressInputView: View {
                 Text("丁目")
                 TextField("", text: $number1str)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    Text("番地")
+                    Text("番")
                 TextField("", text: $number1str)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     Text("号")
