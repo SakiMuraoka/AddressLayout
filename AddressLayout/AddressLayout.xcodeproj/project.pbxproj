@@ -28,6 +28,7 @@
 		D6A4B575250A1B4700864759 /* AddressInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A4B574250A1B4700864759 /* AddressInputView.swift */; };
 		D6A4B577250A1F4200864759 /* PersonInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A4B576250A1F4200864759 /* PersonInputView.swift */; };
 		D6A4B579250B3E0A00864759 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A4B578250B3E0A00864759 /* InputView.swift */; };
+		D6A4B57B250B517300864759 /* envelopData.json in Resources */ = {isa = PBXBuildFile; fileRef = D6A4B57A250B517300864759 /* envelopData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		D6A4B574250A1B4700864759 /* AddressInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressInputView.swift; sourceTree = "<group>"; };
 		D6A4B576250A1F4200864759 /* PersonInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInputView.swift; sourceTree = "<group>"; };
 		D6A4B578250B3E0A00864759 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		D6A4B57A250B517300864759 /* envelopData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = envelopData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		CF0052BB250732DE00458C7B = {
 			isa = PBXGroup;
 			children = (
+				D6A4B57A250B517300864759 /* envelopData.json */,
 				CFBD58E32509EF800099BF94 /* testLogData.json */,
 				CFBD58E72509F4E00099BF94 /* Data.swift */,
 				CFBD58E52509F20F0099BF94 /* Log.swift */,
@@ -181,6 +184,7 @@
 				CFBD58E42509EF800099BF94 /* testLogData.json in Resources */,
 				CF0052D4250732E000458C7B /* LaunchScreen.storyboard in Resources */,
 				CF0052D1250732E000458C7B /* Preview Assets.xcassets in Resources */,
+				D6A4B57B250B517300864759 /* envelopData.json in Resources */,
 				CF0052CE250732E000458C7B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
