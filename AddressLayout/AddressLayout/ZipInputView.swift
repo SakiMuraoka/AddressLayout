@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ZipInputView: View {
-    @State private var name = ""
+    @State private var zipcode = ""
     
     var body: some View {
         VStack{
@@ -18,7 +18,7 @@ struct ZipInputView: View {
                 Spacer()
             }
             HStack{
-                TextField("XXX-XXXX", text: $name)
+                TextField("XXX-XXXX", text: $zipcode)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                     Text("住所自動入力")

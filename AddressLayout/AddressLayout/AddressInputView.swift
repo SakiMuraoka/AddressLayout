@@ -9,10 +9,15 @@
 import SwiftUI
 
 struct AddressInputView: View {
-    @State private var state = ""
-    @State private var city = ""
-    @State private var region = ""
-    @State private var house = ""
+    @State var prefecture: String = ""
+    @State var city: String = ""
+    @State var region: String = ""
+    @State var number1str = ""
+    @State var number2str = ""
+    @State var number3str = ""
+    @State var building: String = ""
+    @State var roomNumberstr = ""
+    
     
     var body: some View {
         VStack{
@@ -20,7 +25,7 @@ struct AddressInputView: View {
                 Text("都道府県")
                 Spacer()
             }
-            TextField("", text: $state)
+            TextField("", text: $prefecture)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
             HStack{
@@ -31,20 +36,35 @@ struct AddressInputView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
             HStack{
-                Text("町番地")
+                Text("町")
                 Spacer()
             }
             TextField("", text: $region)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-            
             HStack{
-                Text("アパート・マンション")
+            TextField("", text: $number1str)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                Text("丁目")
+                TextField("", text: $number1str)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Text("番地")
+                TextField("", text: $number1str)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Text("号")
+            }
+            HStack{
+                Text("アパート・マンション/部屋番号")
                 Spacer()
             }
-            TextField("", text: $house)
+            HStack{
+                TextField("", text: $building)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("", text: $roomNumberstr)
+                    .frame(width: 50.0)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+            }
         }
-    .frame(maxWidth: 300, maxHeight: 300)
+    .frame(maxWidth: 300, maxHeight: 350)
     }
 }
 
