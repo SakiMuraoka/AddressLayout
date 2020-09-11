@@ -10,30 +10,27 @@ import SwiftUI
 
 struct InputView: View {
     var body: some View {
-        NavigationView {
-            VStack{
-                PersonInputView()
-                ZipInputView()
-                AddressInputView()
-                HStack{
-                    Spacer()
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                        Text("完了")
-                            .font(.callout)
-                            .fontWeight(.heavy)
-                            .padding(7)
-                            .foregroundColor(Color.white)
-                            .background(Color.blue)
-                            .cornerRadius(5)
-                    }
-                    .padding(.trailing, 40.0)
-                }
+        VStack{
+            PersonInputView()
+            ZipInputView()
+            AddressInputView()
+            HStack{
                 Spacer()
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Text("完了")
+                        .font(.callout)
+                        .fontWeight(.heavy)
+                        .padding(7)
+                        .foregroundColor(Color.white)
+                        .background(Color.blue)
+                        .cornerRadius(5)
+                }
+                .padding(.trailing, 40.0)
             }
-            .navigationBarTitle("入力画面")
-            .padding()
+            Spacer()
         }
-    }
+        .navigationBarTitle("入力画面", displayMode: .inline)
+        .padding()    }
 }
 
 struct InputView_Previews: PreviewProvider {
