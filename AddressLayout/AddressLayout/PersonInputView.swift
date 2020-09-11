@@ -12,7 +12,7 @@ struct PersonInputView: View {
     @State private var name = ""
     @State private var lastname = ""
     @State private var firstname = ""
-    @State private var isIndividual = true
+    @State private var isOrganization = true
     
     
     var a = true
@@ -21,7 +21,7 @@ struct PersonInputView: View {
             HStack{
                 Text("宛名")
                 Spacer()
-                Picker(selection: self.$isIndividual, label: Text("")){
+                Picker(selection: self.$isOrganization, label: Text("")){
                     Text("個人")
                         .tag(true)
                     Text("組織")
@@ -31,7 +31,7 @@ struct PersonInputView: View {
                 .frame(width: 100)
             }
             HStack {
-                if self.isIndividual {
+                if self.isOrganization {
                     TextField("姓/Last name", text: $lastname)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     TextField("名/First name", text: $firstname)

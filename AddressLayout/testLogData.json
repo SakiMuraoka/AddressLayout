@@ -3,67 +3,77 @@
       "id": 1,
       "sender": {
           "address": {
+              "zipcode": 3050005,
               "prefecture": "茨城県",
-              "city": "つくば市〇〇",
+              "city": "つくば市",
+              "region": "天久保",
               "number1": 0,
               "number2": 0,
               "number3": 0,
               "building": "〇〇マンション",
-              "roomNumber": 0
+              "roomNumber": 0,
           },
-          "name": "山田 太郎"
+          "name": "山田,太郎"
       },
       "receiver": {
           "address": {
+              "zipcode": 3050005,
               "prefecture": "茨城県",
-              "city": "つくば市春日",
+              "city": "つくば市",
+              "region": "春日",
               "number1": 0,
               "number2": 0,
               "number3": 0,
               "building": "〇〇マンション",
               "roomNumber": 0
           },
-          "name": "田中 花子"
+          "name": "田中,花子"
       },
-      "envelopeType": "長形1号",
+      "envelopeTypeId": 0,
       "dates": {
           "year": 2020,
           "month": 9,
           "date": 10
-      }
+      },
+      "isOrganization": false
     },
 
     {
       "id": 2,
       "sender": {
           "address": {
+              "zipcode": 3050005,
               "prefecture": "茨城県",
-              "city": "つくば市〇〇",
+              "city": "つくば市",
+              "region": "春日",
               "number1": 0,
               "number2": 0,
               "number3": 0,
               "building": "〇〇マンション",
               "roomNumber": 0
           },
-          "name": "山田 太郎"
+          "name": "山田,太郎"
       },
       "receiver": {
           "address": {
+              "zipcode": 3050005,
               "prefecture": "茨城県",
-              "city": "つくば市天久保",
+              "city": "つくば市",
+              "region": "天久保",
               "number1": 0,
               "number2": 0,
               "number3": 0,
               "building": "〇〇マンション",
               "roomNumber": 0
           },
-          "name": "田中 花子"
+          "name": "田中,花子"
       },
-      "envelopeType": "長形2号",
+      "envelopeTypeId": 1,
       "dates": {
           "year": 2020,
           "month": 10,
           "date": 15
-      }
+      },
+      "isOrganization": false
     }
 ]

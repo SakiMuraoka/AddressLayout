@@ -29,8 +29,9 @@ struct InputView: View {
             }
             Spacer()
         }
-        .padding()
-    }
+
+        .padding()    }
+
 }
 
 struct InputView_Previews: PreviewProvider {
