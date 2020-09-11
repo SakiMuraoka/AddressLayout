@@ -21,7 +21,7 @@ struct itemRow: View {
                 HStack {
                     Text("封筒タイプ:")
                         .font(.subheadline)
-                    Text(LogData.envelopeType)
+                    Text(String(LogData.envelopeTypeId))
                         .font(.subheadline)
                     Spacer()
                     Text(String(LogData.dates.month) + "月" + String(LogData.dates.date) + "日")
