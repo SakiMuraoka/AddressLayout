@@ -29,8 +29,9 @@ struct InputView: View {
             }
             Spacer()
         }
-        .navigationBarTitle("入力画面", displayMode: .inline)
+
         .padding()    }
+
 }
 
 struct InputView_Previews: PreviewProvider {

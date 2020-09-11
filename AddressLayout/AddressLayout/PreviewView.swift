@@ -9,50 +9,46 @@
 import SwiftUI
 
 struct PreviewView: View {
+    
+
+    
     @State private var isReverse = false
     @State private var isActualDisplay = true
+
     var logData: Log
     var body: some View {
         GeometryReader { bodyView in
             //            NavigationLink(destination: nil)
                 VStack(alignment: .center) {
-                    Picker("", selection: self.$isReverse){
-                        Text("オモテ")
-                        .tag(false)
-                        Text("ウラ")
-                        .tag(true)
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                    .frame(width: bodyView.size.width - 100)
-                    Picker("", selection: self.$isActualDisplay){
-                        Text("プレビュー表示")
-                        .tag(false)
-                        Text("原寸大")
-                        .tag(true)
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                    .frame(width: bodyView.size.width - 100)
-                    ZStack{
-                        ZStack{
-                            FrontEnvelopePreviewView().opacity(self.isReverse ? 0.0 : 1.0)
-                            BackEnvelopePreviewView().opacity(self.isReverse ? 1.0 : 0.0)
-                        }
-                        .opacity(self.isActualDisplay ? 0.0 : 1.0)
-                        ScrollView ([.horizontal, .vertical], showsIndicators: true){
-                            // TODO: 本物の封筒データにする
-                            Rectangle()
-                                .fill(Color.init(red: 0.92, green: 0.60, blue: 0.32))
-                                .frame(
-                                    width:  326.0*12.0/2.54 ,
-                                    height: 326.0*23.5/2.54
-                                )
-                                .opacity(self.isActualDisplay ? 1.0 : 0.0)
-                        }
-                    }
-                    
-                    Spacer()
+// MARK: - セグメントコントローラーと編集ボタン
                     HStack{
-                        
+                        Picker("", selection: self.$isReverse){
+                                Text("オモテ")
+                                .tag(false)
+                                Text("ウラ")
+                                .tag(true)
+                            }
+                            .pickerStyle(SegmentedPickerStyle())
+                            .frame(width: bodyView.size.width - 100)
+                        Spacer()
+                        Button(action: {
+                            self.isActualDisplay = !self.isActualDisplay
+                        }){
+                            Image(systemName: "square.and.pencil")
+                        }
+                    }
+                    .padding(.horizontal)
+                    
+// MARK: -　封筒の部分
+                    ZStack{
+                        ActualSizeEnvelopeView().opacity(self.isActualDisplay ? 1.0 : 0.0)
+                            
+                        InputView().opacity(self.isActualDisplay ? 0.0 : 1.0)
+                    }
+                    Spacer()
+// MARK: - 封筒サイズ変更ボタンと共有ボタン
+                    HStack{
+
                         Button(action: {
                             // TODO: 封筒のサイズ変更機能のViewと接続
                             print("Tapped.")
