@@ -9,11 +9,14 @@
 import SwiftUI
 
 struct PreviewView: View {
+    
+
+    
     @State private var isReverse = false
     @State private var isActualDisplay = true
+
     var logData: Log
     var body: some View {
-
         GeometryReader { bodyView in
             //            NavigationLink(destination: nil)
                 VStack(alignment: .center) {
@@ -38,25 +41,14 @@ struct PreviewView: View {
                     
 // MARK: -　封筒の部分
                     ZStack{
-                        GeometryReader { geometry in
-                            ScrollView ([.horizontal, .vertical], showsIndicators: true){
-                                ZStack(alignment: .topTrailing){
-                                    Rectangle()
-                                        .fill(Color.init(red: 0.92, green: 0.60, blue: 0.32))
-                                        .frame(width: geometry.size.width, height: geometry.size.height)
-                                        // TODO: 封筒サイズのマルチ対応（下のパラメータは長型風のもの）
-                                        //幅の広い封筒サイズだと画面に収まらないので、画面のwidthとheightを比較して、画面サイズに合わせて動的に封筒の領域を変えている
-
-                                }
-                            }.frame(width: bodyView.size.width - 100, height: bodyView.size.height-200)
-                             .opacity(self.isActualDisplay ? 1.0 : 0.0)
+                        ActualSizeEnvelopeView().opacity(self.isActualDisplay ? 1.0 : 0.0)
                             
-                        }
+                        InputView().opacity(self.isActualDisplay ? 0.0 : 1.0)
                     }
-                    
                     Spacer()
-                    HStack{
 // MARK: - 封筒サイズ変更ボタンと共有ボタン
+                    HStack{
+
                         Button(action: {
                             // TODO: 封筒のサイズ変更機能のViewと接続
                             print("Tapped.")

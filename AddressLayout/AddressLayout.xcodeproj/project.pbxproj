@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4132E54F2508BCDA00FDEA76 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132E54E2508BCDA00FDEA76 /* PreviewView.swift */; };
+		4132E555250B554F00FDEA76 /* ActualSizeEnvelopeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132E554250B554F00FDEA76 /* ActualSizeEnvelopeView.swift */; };
 		CF0052C8250732DE00458C7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0052C7250732DE00458C7B /* AppDelegate.swift */; };
 		CF0052CA250732DE00458C7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0052C9250732DE00458C7B /* SceneDelegate.swift */; };
 		CF0052CC250732DE00458C7B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0052CB250732DE00458C7B /* ContentView.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		4132E54E2508BCDA00FDEA76 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		4132E554250B554F00FDEA76 /* ActualSizeEnvelopeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualSizeEnvelopeView.swift; sourceTree = "<group>"; };
 		CF0052C4250732DE00458C7B /* AddressLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0052C7250732DE00458C7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF0052C9250732DE00458C7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				CF0052E22507C37B00458C7B /* itemList.swift */,
 				CF0052E42507C54400458C7B /* logView.swift */,
 				4132E54E2508BCDA00FDEA76 /* PreviewView.swift */,
+				4132E554250B554F00FDEA76 /* ActualSizeEnvelopeView.swift */,
 				CF0052C7250732DE00458C7B /* AppDelegate.swift */,
 				CF0052C9250732DE00458C7B /* SceneDelegate.swift */,
 				CF0052CB250732DE00458C7B /* ContentView.swift */,
@@ -191,7 +194,7 @@
 				D6A4B577250A1F4200864759 /* PersonInputView.swift in Sources */,
 				CFBD58E62509F20F0099BF94 /* Log.swift in Sources */,
 				CF0052E32507C37B00458C7B /* itemList.swift in Sources */,
-				4132E5532509F0DD00FDEA76 /* BackEnvelopePreviewView.swift in Sources */,
+				4132E555250B554F00FDEA76 /* ActualSizeEnvelopeView.swift in Sources */,
 				D6A4B573250A16D800864759 /* ZipInputView.swift in Sources */,
 				4132E54F2508BCDA00FDEA76 /* PreviewView.swift in Sources */,
 				D6A4B579250B3E0A00864759 /* InputView.swift in Sources */,
