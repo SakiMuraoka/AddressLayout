@@ -16,7 +16,7 @@ struct itemRow: View {
                 .resizable()
                 .frame(width: 50, height: 50)
             VStack(alignment: .leading) {
-                Text(LogData.receiver.address.prefecture + LogData.receiver.address.city)
+                Text(LogData.receiver.address.prefecture + LogData.receiver.address.city + LogData.receiver.address.region)
                     .font(.headline)
                 HStack {
                     Text("封筒タイプ:")
