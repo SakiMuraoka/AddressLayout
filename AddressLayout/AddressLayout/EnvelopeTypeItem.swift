@@ -10,16 +10,26 @@ import SwiftUI
 
 struct EnvelopeTypeItem: View {
     var envelope: Envelope
+    var isSelected: Bool
     var body: some View {
         VStack {
-            Image(envelope.iconImageName)
-                .resizable()
-                .frame(width: 60, height: 60)
-                .background(Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 4))
-                .shadow(radius: 500)
+            if self.isSelected{
+                Image(envelope.iconImageName)
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.red, lineWidth: 4))
+                    .shadow(radius: 500)
+            }else{
+                Image(envelope.iconImageName)
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 4))
+                    .shadow(radius: 500)
+            }
             Text(envelope.envelopeName)
                 .font(.footnote)
         }
@@ -29,8 +39,10 @@ struct EnvelopeTypeItem: View {
 
 struct EnvelopeTypeItem_Previews: PreviewProvider {
     static var previews: some View {
-        EnvelopeTypeItem(envelope: envelopeData[0])
-//        EnvelopeTypeItem(name: 1)
+        Group{
+            EnvelopeTypeItem(envelope: envelopeData[0], isSelected: true)
+            EnvelopeTypeItem(envelope: envelopeData[0], isSelected: false)
+        }
         .previewLayout(.fixed(width: 120, height: 150))
     }
 }
