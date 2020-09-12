@@ -9,26 +9,16 @@
 import SwiftUI
 
 struct EnvelopeView: View {
-    @ObservedObject var envelopeViewModel: EnvelopeTypeViewModel
-    
+    @EnvironmentObject private var envelopeViewModel: EnvelopeTypeViewModel
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(alignment: .bottom, spacing: 25){
-                
                 ForEach(self.envelopeViewModel.envelopes) {envelope in
-                    if self.envelopeViewModel.selectedId == envelope.id {
-                        EnvelopeTypeItem(envelope: envelope, isSelected: true)
+                    EnvelopeTypeItem(envelope: envelope, isSelected: self.envelopeViewModel.selectedId == envelope.id)
                         .onTapGesture {
                             self._envelopeViewModel.wrappedValue.selectedId = envelope.id
-                        }
-                    }else {
-                        EnvelopeTypeItem(envelope: envelope, isSelected: false)
-                        .onTapGesture {
-                            self._envelopeViewModel.wrappedValue.selectedId = envelope.id
-                        }
                     }
                 }
-
             }
         }
         .padding(.horizontal, 30.0)
@@ -37,6 +27,6 @@ struct EnvelopeView: View {
 
 struct EnvelopeView_Previews: PreviewProvider {
     static var previews: some View {
-        EnvelopeView(envelopeViewModel: .init(selectedId: 1))
+        EnvelopeView().environmentObject(EnvelopeTypeViewModel.init())
     }
 }

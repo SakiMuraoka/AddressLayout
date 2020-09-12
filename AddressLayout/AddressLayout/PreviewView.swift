@@ -14,6 +14,7 @@ struct PreviewView: View {
     
     @State private var isReverse = false
     @State private var isActualDisplay = true
+    @ObservedObject private var envelopeTypeViewModel: EnvelopeTypeViewModel = .init()
 
     var logData: Log
     var body: some View {
@@ -45,7 +46,6 @@ struct PreviewView: View {
                             
                         InputView().opacity(self.isActualDisplay ? 0.0 : 1.0)
                     }
-                    Spacer()
 // MARK: - 封筒サイズ変更ボタンと共有ボタン
                     HStack{
 
