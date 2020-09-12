@@ -11,14 +11,13 @@ import SwiftUI
 struct EnvelopeView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(alignment: .bottom, spacing: 20){
-                EnvelopeTypeItem(imageName: "envelope", typeName: "定型郵便用")
-                EnvelopeTypeItem(imageName: "envelope", typeName: "定型郵便用")
-                EnvelopeTypeItem(imageName: "envelope", typeName: "定型郵便用")
-                EnvelopeTypeItem(imageName: "envelope", typeName: "定型郵便用")
-                EnvelopeTypeItem(imageName: "envelope", typeName: "定型郵便用")
+            HStack(alignment: .bottom, spacing: 25){
+                ForEach(envelopeData) {envelope in
+                    EnvelopeTypeItem(envelope: envelope)
+                }
             }
         }
+        .padding(.horizontal, 30.0)
     }
 }
 

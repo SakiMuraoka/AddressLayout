@@ -1,23 +1,25 @@
 [
     {
       "id": 0,
-      "envelopeName": "角形2号"
-      "iconImageName": "envelopeIcon"
-      "previewImageName": "previewKaku2"
+      "envelopeName": "角形2号" ,
+      "iconImageName": "envelopeIcon",
+      "previewImageName": "previewKaku2",
       "previewReverseImageName": "previewKaku2R"
     },
+    
     {
         "id": 1,
-        "envelopeName": "長型3号"
-        "iconImageName": "envelopeIcon"
-        "previewImageName": "previewNaga3"
+        "envelopeName": "長型3号",
+        "iconImageName": "envelopeIcon",
+        "previewImageName": "previewNaga3",
         "previewReverseImageName": "previewNaga3R"
     },
+    
     {
         "id": 2,
-        "envelopeName": "長型40号"
-        "iconImageName": "envelopeIcon"
-        "previewImageName": "previewNaga40"
+        "envelopeName": "長型40号",
+        "iconImageName": "envelopeIcon",
+        "previewImageName": "previewNaga40",
         "previewReverseImageName": "previewNaga40R"
     }
 ]

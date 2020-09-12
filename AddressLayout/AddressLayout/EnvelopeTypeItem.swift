@@ -9,11 +9,10 @@
 import SwiftUI
 
 struct EnvelopeTypeItem: View {
-    var imageName: String
-    var typeName: String
+    var envelope: Envelope
     var body: some View {
         VStack {
-            Image(imageName)
+            Image(envelope.iconImageName)
                 .resizable()
                 .frame(width: 60, height: 60)
                 .background(Color.white)
@@ -21,11 +20,8 @@ struct EnvelopeTypeItem: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 4))
                 .shadow(radius: 500)
-            Text(typeName)
+            Text(envelope.envelopeName)
                 .font(.footnote)
-                
-                
-                
         }
         .frame(maxWidth: 100, maxHeight: 100)
     }
@@ -33,7 +29,8 @@ struct EnvelopeTypeItem: View {
 
 struct EnvelopeTypeItem_Previews: PreviewProvider {
     static var previews: some View {
-        EnvelopeTypeItem(imageName: "envelope", typeName: "定型郵便用")
+        EnvelopeTypeItem(envelope: envelopeData[0])
+//        EnvelopeTypeItem(name: 1)
         .previewLayout(.fixed(width: 120, height: 150))
     }
 }
