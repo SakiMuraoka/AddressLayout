@@ -13,7 +13,8 @@
               "building": "〇〇マンション",
               "roomNumber": 0
           },
-          "name": "山田,太郎"
+          "name": "山田,太郎",
+          "isOrganization": false
       },
       "receiver": {
           "address": {
@@ -27,15 +28,15 @@
               "building": "〇〇マンション",
               "roomNumber": 0
           },
-          "name": "田中,花子"
+          "name": "田中,花子",
+          "isOrganization": false
       },
       "envelopeTypeId": 2,
       "dates": {
           "year": 2020,
           "month": 9,
           "date": 10
-      },
-      "isOrganization": false
+      }
     },
 
     {
@@ -52,7 +53,8 @@
               "building": "〇〇マンション",
               "roomNumber": 0
           },
-          "name": "山田,太郎"
+          "name": "山田,太郎",
+          "isOrganization": false
       },
       "receiver": {
           "address": {
@@ -66,15 +68,15 @@
               "building": "〇〇マンション",
               "roomNumber": 0
           },
-          "name": "田中,花子"
+          "name": "田中,花子",
+          "isOrganization": false
       },
       "envelopeTypeId": 1,
       "dates": {
           "year": 2020,
           "month": 10,
           "date": 15
-      },
-      "isOrganization": false
+      }
     },
     {
       "id": 3,
@@ -90,7 +92,8 @@
               "building": "〇〇ハイツ",
               "roomNumber": 0
           },
-          "name": "鈴木,良"
+          "name": "鈴木,良",
+          "isOrganization": false
       },
       "receiver": {
           "address": {
@@ -104,15 +107,15 @@
               "building": "〇〇マンション",
               "roomNumber": 0
           },
-          "name": "中川,智子"
+          "name": "中川,智子",
+          "isOrganization": false
       },
       "envelopeTypeId": 1,
       "dates": {
           "year": 2020,
           "month": 9,
           "date": 10
-      },
-      "isOrganization": false
+      }
     },
     {
       "id": 4,
@@ -128,7 +131,8 @@
               "building": "ハイツ〇〇",
               "roomNumber": 0
           },
-          "name": "佐藤,菜々子"
+          "name": "佐藤,菜々子",
+          "isOrganization": false
       },
       "receiver": {
           "address": {
@@ -142,15 +146,15 @@
               "building": "〇〇ビル",
               "roomNumber": 0
           },
-          "name": "〇〇株式会社人事部"
+          "name": "〇〇株式会社人事部",
+          "isOrganization": true
       },
       "envelopeTypeId": 0,
       "dates": {
           "year": 2020,
           "month": 9,
           "date": 10
-      },
-      "isOrganization": true
+      }
     },
     {
       "id": 5,
@@ -166,7 +170,8 @@
               "building": "〇〇",
               "roomNumber": 0
           },
-          "name": "木村,工"
+          "name": "木村,工",
+          "isOrganization": false
       },
       "receiver": {
           "address": {
@@ -180,15 +185,15 @@
               "building": "〇〇マンション",
               "roomNumber": 0
           },
-          "name": "小泉,光"
+          "name": "小泉,光",
+          "isOrganization": false
       },
       "envelopeTypeId": 0,
       "dates": {
           "year": 2020,
           "month": 9,
           "date": 10
-      },
-      "isOrganization": false
+      }
     },
     {
       "id": 6,
@@ -204,7 +209,8 @@
               "building": "〇〇",
               "roomNumber": 0
           },
-          "name": "高橋,陽子"
+          "name": "高橋,陽子",
+          "isOrganization": false
       },
       "receiver": {
           "address": {
@@ -218,15 +224,15 @@
               "building": "〇〇ビル",
               "roomNumber": 0
           },
-          "name": "〇〇株式会社営業部"
+          "name": "〇〇株式会社営業部",
+          "isOrganization": true
       },
       "envelopeTypeId": 1,
       "dates": {
           "year": 2020,
           "month": 8,
           "date": 20
-      },
-      "isOrganization": true
+      }
     },
     {
       "id": 7,
@@ -242,7 +248,8 @@
               "building": "〇〇",
               "roomNumber": 0
           },
-          "name": "木村,工"
+          "name": "木村,工",
+          "isOrganization": false
       },
       "receiver": {
           "address": {
@@ -256,15 +263,15 @@
               "building": "〇〇ビル",
               "roomNumber": 0
           },
-          "name": "〇〇株式会社営業部"
+          "name": "〇〇株式会社営業部",
+          "isOrganization": true
       },
       "envelopeTypeId": 2,
       "dates": {
           "year": 2020,
           "month": 3,
           "date": 10
-      },
-      "isOrganization": true
+      }
     },
     {
       "id": 8,
@@ -280,7 +287,8 @@
               "building": "〇〇",
               "roomNumber": 0
           },
-          "name": "木村,工"
+          "name": "木村,工",
+          "isOrganization": false
       },
       "receiver": {
           "address": {
@@ -294,15 +302,15 @@
               "building": "〇〇ハイツ",
               "roomNumber": 0
           },
-          "name": "小田,香"
+          "name": "小田,香",
+          "isOrganization": false
       },
       "envelopeTypeId": 2,
       "dates": {
           "year": 2020,
           "month": 9,
           "date": 10
-      },
-      "isOrganization": false
+      }
     },
     {
       "id": 9,
@@ -318,7 +326,8 @@
               "building": "〇〇",
               "roomNumber": 0
           },
-          "name": "木村,工"
+          "name": "木村,工",
+          "isOrganization": false
       },
       "receiver": {
           "address": {
@@ -332,15 +341,15 @@
               "building": "〇〇ビル",
               "roomNumber": 0
           },
-          "name": "〇〇株式会社営業部"
+          "name": "〇〇株式会社営業部",
+          "isOrganization": true
       },
       "envelopeTypeId": 2,
       "dates": {
           "year": 2020,
           "month": 11,
           "date": 2
-      },
-      "isOrganization": true
+      }
     },
     {
       "id": 10,
@@ -356,7 +365,8 @@
               "building": "〇〇マンション",
               "roomNumber": 0
           },
-          "name": "木村,工"
+          "name": "木村,工",
+          "isOrganization": false
       },
       "receiver": {
           "address": {
@@ -370,15 +380,15 @@
               "building": "〇〇ビル",
               "roomNumber": 0
           },
-          "name": "刈谷,浩介"
+          "name": "刈谷,浩介",
+          "isOrganization": false
       },
       "envelopeTypeId": 2,
       "dates": {
           "year": 2020,
           "month": 2,
           "date": 21
-      },
-      "isOrganization": false
+      }
     },
     {
       "id": 11,
@@ -394,7 +404,8 @@
               "building": "〇〇マンション",
               "roomNumber": 0
           },
-          "name": "村上,良子"
+          "name": "村上,良子",
+          "isOrganization": false
       },
       "receiver": {
           "address": {
@@ -408,15 +419,15 @@
               "building": "〇〇マンション",
               "roomNumber": 0
           },
-          "name": "角田,健"
+          "name": "角田,健",
+          "isOrganization": false
       },
       "envelopeTypeId": 2,
       "dates": {
           "year": 2020,
           "month": 9,
           "date": 10
-      },
-      "isOrganization": false
+      }
     },
     {
       "id": 12,
@@ -432,7 +443,8 @@
               "building": "〇〇マンション",
               "roomNumber": 0
           },
-          "name": "村上,良子"
+          "name": "村上,良子",
+          "isOrganization": false
       },
       "receiver": {
           "address": {
@@ -446,15 +458,15 @@
               "building": "〇〇ビル",
               "roomNumber": 0
           },
-          "name": "株式会社〇〇人事部新卒採用担当"
+          "name": "株式会社〇〇人事部新卒採用担当",
+          "isOrganization": true
       },
       "envelopeTypeId": 2,
       "dates": {
           "year": 2020,
           "month": 10,
           "date": 1
-      },
-      "isOrganization": true
+      }
     }
     
 ]

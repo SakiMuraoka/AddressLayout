@@ -14,7 +14,6 @@ class EnvelopeData: Object{
     dynamic var receiver: EnvelopeInformation?
     dynamic var envelopeTypeId: Int = 0
     dynamic var dates: EnvelopeDate?
-    dynamic var isOrganization: Bool = false
     
     static var realm = try! Realm()
 }
@@ -22,6 +21,7 @@ class EnvelopeData: Object{
 class EnvelopeInformation: Object {
     dynamic var address: EnvelopeAddress?
     dynamic var name: String = ""
+    dynamic var isOrganization: Bool = false
 }
 
 class EnvelopeDate: Object {
