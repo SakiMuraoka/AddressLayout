@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -145,6 +145,8 @@
 			dependencies = (
 			);
 			name = AddressLayout;
+			packageProductDependencies = (
+			);
 			productName = AddressLayout;
 			productReference = CF0052C4250732DE00458C7B /* AddressLayout.app */;
 			productType = "com.apple.product-type.application";
@@ -173,6 +175,9 @@
 				Base,
 			);
 			mainGroup = CF0052BB250732DE00458C7B;
+			packageReferences = (
+				CF65FFD7250E3431000FE0E7 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
+			);
 			productRefGroup = CF0052C5250732DE00458C7B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
