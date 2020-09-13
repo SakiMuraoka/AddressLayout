@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct itemList: View {
-    @ObservedObject var filterData: ViewModel
+    @ObservedObject var filterData: filterViewModel
     
     var body: some View {
         List {
@@ -25,7 +25,7 @@ struct itemList: View {
     }
 }
 
-func filter(text: String, LogData: Log, filterData: ViewModel) -> Bool{
+func filter(text: String, LogData: Log, filterData: filterViewModel) -> Bool{
     var isHidden = true
     let senderAddress = LogData.sender.address.prefecture + LogData.sender.address.city + LogData.sender.address.region
     let receiverAddress = LogData.receiver.address.prefecture + LogData.receiver.address.city + LogData.receiver.address.region
@@ -96,7 +96,7 @@ func filter(text: String, LogData: Log, filterData: ViewModel) -> Bool{
 
 struct itemList_Previews: PreviewProvider {
     static var previews: some View {
-        itemList(filterData: ViewModel())
+        itemList(filterData: filterViewModel())
     }
 }
 
