@@ -3,7 +3,7 @@
       "id": 1,
       "sender": {
           "address": {
-              "zipcode": 3050005,
+              "zipcode": "305-0005",
               "prefecture": "茨城県",
               "city": "つくば市",
               "region": "天久保",
@@ -17,7 +17,7 @@
       },
       "receiver": {
           "address": {
-              "zipcode": 3050005,
+              "zipcode": "305-0005",
               "prefecture": "茨城県",
               "city": "つくば市",
               "region": "春日",
@@ -42,7 +42,7 @@
       "id": 2,
       "sender": {
           "address": {
-              "zipcode": 3050005,
+              "zipcode": "305-0005",
               "prefecture": "茨城県",
               "city": "つくば市",
               "region": "春日",
@@ -56,7 +56,7 @@
       },
       "receiver": {
           "address": {
-              "zipcode": 3050005,
+              "zipcode": "305-0005",
               "prefecture": "茨城県",
               "city": "つくば市",
               "region": "天久保",

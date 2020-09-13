@@ -7,9 +7,11 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct logView: View {
     @State var text = ""
+    @ObservedObject var envelopeData = logViewModel()
     @ObservedObject var filterData = filterViewModel()
     @State var showLogView = false
     
@@ -17,7 +19,7 @@ struct logView: View {
         NavigationView {
             VStack {
                 HStack {
-                    NavigationLink(destination: InputView()){
+                    NavigationLink(destination: InputView(address: testLogData[0].sender.address)){
                         Image(systemName: "plus")
                     }
                     Text("新規")
@@ -63,6 +65,10 @@ final class filterViewModel: ObservableObject {
     @Published var roomNumberstr = ""
     @Published var isOrganization = true
     @Published var searchText = ""
+}
+
+class logViewModel: ObservableObject {
+    @Published var EnvelopeDataModel: [EnvelopeData] = (try? Realm().objects(EnvelopeData.self).map { $0 }) ?? []
 }
 
 struct logView_Previews: PreviewProvider {

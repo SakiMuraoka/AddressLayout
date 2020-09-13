@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct itemList: View {
+
     @ObservedObject var filterData: filterViewModel
-    
+    @ObservedObject var envelopeData: logViewModel
     var body: some View {
         List {
             ForEach(testLogData) {LogData in

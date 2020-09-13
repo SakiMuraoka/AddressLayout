@@ -9,11 +9,10 @@
 import SwiftUI
 
 struct PersonInputView: View {
-    @State private var name = ""
-    @State private var lastname = ""
-    @State private var firstname = ""
-    @State private var isOrganization = true
-    
+    @Binding var name: String
+    @Binding var lastname: String
+    @Binding var firstname: String
+    @Binding var isOrganization: Bool
     
     var a = true
     var body: some View {
@@ -50,7 +49,7 @@ struct PersonInputView: View {
 
 struct PersonInputView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonInputView()
+        PersonInputView(name: .constant(""), lastname: .constant(""), firstname: .constant(""), isOrganization: .constant(false))
             .previewLayout(.fixed(width: 350, height: 200))
     }
 }
