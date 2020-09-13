@@ -24,7 +24,7 @@ struct itemList: View {
 
 struct itemList_Previews: PreviewProvider {
     static var previews: some View {
-        itemList(searchText: "茨城")
+        itemList(searchText: "")
     }
 }
 
