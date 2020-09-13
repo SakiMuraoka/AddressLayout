@@ -10,7 +10,7 @@ import SwiftUI
 
 struct logView: View {
     @State var text = ""
-    @ObservedObject var filterData = ViewModel()
+    @ObservedObject var filterData = filterViewModel()
     @State var showLogView = false
     
     var body: some View {
@@ -48,7 +48,7 @@ struct logView: View {
     }    
 }
 
-final class ViewModel: ObservableObject {
+final class filterViewModel: ObservableObject {
     @Published var name = ""
     @Published var lastname = ""
     @Published var firstname = ""

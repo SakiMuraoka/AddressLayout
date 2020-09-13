@@ -12,7 +12,7 @@ struct FilterView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var showLogView = false
     @Binding var isPresent: Bool
-    @ObservedObject var filterData: ViewModel
+    @ObservedObject var filterData: filterViewModel
     
     var body: some View {
         VStack{
@@ -125,7 +125,7 @@ struct BindingViewExamplePreviewContainer_2 : View {
      private var value = false
 
      var body: some View {
-        FilterView(isPresent: $value, filterData: ViewModel())
+        FilterView(isPresent: $value, filterData: filterViewModel())
      }
 }
 
