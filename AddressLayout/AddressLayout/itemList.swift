@@ -9,12 +9,14 @@
 import SwiftUI
 
 struct itemList: View {
-
+    var searchText: String
     var body: some View {
         List {
             ForEach(testLogData) {LogData in
-                NavigationLink(destination: PreviewView(logData: LogData)) {
-                    itemRow(LogData: LogData)
+                if(self.searchText == "" || (LogData.sender.address.prefecture + LogData.sender.address.city + LogData.sender.address.region).contains(self.searchText) || (LogData.receiver.address.prefecture + LogData.receiver.address.city + LogData.receiver.address.region).contains(self.searchText) || (LogData.sender.name).contains(self.searchText) || (LogData.receiver.name).contains(self.searchText)){
+                        NavigationLink(destination: PreviewView(logData: LogData))
+                            {itemRow(LogData: LogData)
+                    }
                 }
             }
         }
@@ -23,6 +25,7 @@ struct itemList: View {
 
 struct itemList_Previews: PreviewProvider {
     static var previews: some View {
-        itemList()
+        itemList(searchText: "茨城")
     }
 }
+
