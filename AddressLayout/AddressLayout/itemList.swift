@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct itemList: View {
+    @ObservedObject var envelopeData: logViewModel
     var searchText: String
     var body: some View {
         List {
@@ -25,7 +26,7 @@ struct itemList: View {
 
 struct itemList_Previews: PreviewProvider {
     static var previews: some View {
-        itemList(searchText: "茨城")
+        itemList(envelopeData: logViewModel(), searchText: "")
     }
 }
 

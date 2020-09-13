@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ZipInputView: View {
-    @State private var zipcode = ""
+    @Binding var zipcode: String
     
     var body: some View {
         VStack{
@@ -37,6 +37,6 @@ struct ZipInputView: View {
 
 struct ZipInputView_Previews: PreviewProvider {
     static var previews: some View {
-        ZipInputView()
+        ZipInputView(zipcode: .constant(""))
     }
 }

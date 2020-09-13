@@ -9,14 +9,14 @@
 import SwiftUI
 
 struct AddressInputView: View {
-    @State var prefecture: String = ""
-    @State var city: String = ""
-    @State var region: String = ""
-    @State var number1str = ""
-    @State var number2str = ""
-    @State var number3str = ""
-    @State var building: String = ""
-    @State var roomNumberstr = ""
+    @Binding var prefecture: String
+    @Binding var city: String
+    @Binding var region: String
+    @Binding var number1str: String
+    @Binding var number2str: String
+    @Binding var number3str: String
+    @Binding var building: String
+    @Binding var roomNumberstr: String
     
     
     var body: some View {
@@ -42,13 +42,14 @@ struct AddressInputView: View {
             TextField("", text: $region)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             HStack{
-            TextField("", text: $number1str)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                Text("丁目")
                 TextField("", text: $number1str)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.numberPad)
+                Text("丁目")
+                TextField("", text: $number2str)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     Text("番")
-                TextField("", text: $number1str)
+                TextField("", text: $number3str)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     Text("号")
             }
@@ -70,6 +71,13 @@ struct AddressInputView: View {
 
 struct AddressInputView_Previews: PreviewProvider {
     static var previews: some View {
-        AddressInputView()
+        AddressInputView(prefecture: .constant(""),
+                         city: .constant(""),
+                         region: .constant(""),
+                         number1str: .constant(""),
+                         number2str: .constant(""),
+                         number3str: .constant(""),
+                         building: .constant(""),
+                         roomNumberstr: .constant(""))
     }
 }

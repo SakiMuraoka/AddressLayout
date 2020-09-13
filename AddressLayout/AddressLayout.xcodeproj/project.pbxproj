@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411BE043250DC405009A2030 /* EnvelopeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE042250DC405009A2030 /* EnvelopeData.swift */; };
 		4132E54F2508BCDA00FDEA76 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132E54E2508BCDA00FDEA76 /* PreviewView.swift */; };
 		4132E555250B554F00FDEA76 /* ActualSizeEnvelopeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132E554250B554F00FDEA76 /* ActualSizeEnvelopeView.swift */; };
 		8A16B54324AEB96FB83B4B8F /* Pods_AddressLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C74F46B87737B8ACD262A31 /* Pods_AddressLayout.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		411BE042250DC405009A2030 /* EnvelopeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvelopeData.swift; sourceTree = "<group>"; };
 		4132E54E2508BCDA00FDEA76 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		4132E554250B554F00FDEA76 /* ActualSizeEnvelopeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualSizeEnvelopeView.swift; sourceTree = "<group>"; };
 		5575DC1E6D0B6578E26E0A6B /* Pods-AddressLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddressLayout.debug.xcconfig"; path = "Target Support Files/Pods-AddressLayout/Pods-AddressLayout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,7 +84,6 @@
 				5575DC1E6D0B6578E26E0A6B /* Pods-AddressLayout.debug.xcconfig */,
 				DEA8FC819D80607FD80174CF /* Pods-AddressLayout.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -122,6 +123,7 @@
 			children = (
 				CF0052E02507BE2800458C7B /* itemRow.swift */,
 				CF0052E22507C37B00458C7B /* itemList.swift */,
+				411BE042250DC405009A2030 /* EnvelopeData.swift */,
 				CF0052E42507C54400458C7B /* logView.swift */,
 				4132E54E2508BCDA00FDEA76 /* PreviewView.swift */,
 				4132E554250B554F00FDEA76 /* ActualSizeEnvelopeView.swift */,
@@ -280,6 +282,7 @@
 				CF0052CA250732DE00458C7B /* SceneDelegate.swift in Sources */,
 				D664194E250C731D008671A7 /* EnvelopeTypeViewModel.swift in Sources */,
 				CF0052CC250732DE00458C7B /* ContentView.swift in Sources */,
+				411BE043250DC405009A2030 /* EnvelopeData.swift in Sources */,
 				CF0052E12507BE2800458C7B /* itemRow.swift in Sources */,
 				D6A4B57D250B668F00864759 /* Envelope.swift in Sources */,
 				D6A4B5692509D5B100864759 /* EnvelopeView.swift in Sources */,

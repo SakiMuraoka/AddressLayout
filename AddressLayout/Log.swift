@@ -29,7 +29,7 @@ struct Dates: Hashable, Codable {
 }
 
 struct Address: Hashable, Codable {
-    var zipcode: Int
+    var zipcode: String
     var prefecture: String
     var city: String
     var region: String
@@ -38,4 +38,10 @@ struct Address: Hashable, Codable {
     var number3: Int
     var building: String
     var roomNumber: Int
+}
+
+struct Log_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
 }
