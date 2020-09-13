@@ -19,7 +19,6 @@ struct PreviewView: View {
     var logData: Log
     var body: some View {
         GeometryReader { bodyView in
-            //            NavigationLink(destination: nil)
                 VStack(alignment: .center) {
 // MARK: - セグメントコントローラーと編集ボタン
                     HStack{
@@ -31,31 +30,27 @@ struct PreviewView: View {
                             }
                             .pickerStyle(SegmentedPickerStyle())
                             .frame(width: bodyView.size.width - 100)
-                        Spacer()
-                        Button(action: {
-                            self.isActualDisplay = !self.isActualDisplay
-                        }){
-                            Image(systemName: "square.and.pencil")
-                        }
                     }
-                    .padding(.horizontal)
+
                     
 // MARK: -　封筒の部分
-                    ZStack{
-                        ActualSizeEnvelopeView().opacity(self.isActualDisplay ? 1.0 : 0.0)
-                            
-                        InputView(address: testLogData[0].sender.address).opacity(self.isActualDisplay ? 0.0 : 1.0)
+                    ScrollView([.horizontal, .vertical], showsIndicators: true) {
+                        ActualSizeEnvelopeView()
                     }
+                    
 // MARK: - 封筒サイズ変更ボタンと共有ボタン
                     HStack{
-
+                        NavigationLink(destination: InputView(address: self.logData.sender.address)){
+                            Image(systemName: "square.and.pencil")
+                        }
+                        .padding(.leading, 40.0)
+                        Spacer()
                         Button(action: {
                             // TODO: 封筒のサイズ変更機能のViewと接続
                             print("Tapped.")
                         }) {
                             Image(systemName: "envelope")
                         }
-                        .padding(.leading, 40.0)
                         Spacer()
                         Button(action: {
                             // TODO: プリント機能のViewと接続
