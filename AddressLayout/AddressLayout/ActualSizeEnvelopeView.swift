@@ -34,20 +34,21 @@ struct ActualSizeEnvelopeView: View {
     var body: some View {
         GeometryReader { bodyView in
             ZStack(alignment: .topTrailing){
-                Rectangle()
-                    .fill(Color.init(red: 0.92, green: 0.60, blue: 0.32))
-                    .frame(width: self.envelopeGeometryMagnification * 12.0,
-                           height: self.envelopeGeometryMagnification * 23.5)
-                    .offset(x: self.currentPosition.width, y: self.currentPosition.height)
-                    .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .global)
-                        .onChanged { value in
-                            self.currentPosition = CGSize(width: value.translation.width + self.newPosition.width, height: value.translation.height + self.newPosition.height)
-                        }
-                        .onEnded { value in
-                            self.currentPosition = CGSize(width: value.translation.width + self.newPosition.width, height: value.translation.height + self.newPosition.height)
-                            self.newPosition = self.currentPosition
-                            print(self.currentPosition)
-                        })
+                Image("previewNaga3")
+//                Rectangle()
+//                    .fill(Color.init(red: 0.92, green: 0.60, blue: 0.32))
+//                    .frame(width: self.envelopeGeometryMagnification * 12.0,
+//                           height: self.envelopeGeometryMagnification * 23.5)
+//                    .offset(x: self.currentPosition.width, y: self.currentPosition.height)
+//                    .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .global)
+//                        .onChanged { value in
+//                            self.currentPosition = CGSize(width: value.translation.width + self.newPosition.width, height: value.translation.height + self.newPosition.height)
+//                        }
+//                        .onEnded { value in
+//                            self.currentPosition = CGSize(width: value.translation.width + self.newPosition.width, height: value.translation.height + self.newPosition.height)
+//                            self.newPosition = self.currentPosition
+//                            print(self.currentPosition)
+//                        })
                     // TODO: 封筒サイズのマルチ対応（下のパラメータは長型風のもの）
                 
                     
@@ -62,8 +63,8 @@ struct ActualSizeEnvelopeView: View {
                             .border(/*@START_MENU_TOKEN@*/Color.red/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                             .padding([.top, .trailing], 10.0)
                 }
-            }.frame(width: bodyView.size.width-50 , height: bodyView.size.height)
-             .clipped()
+            }
+//            .frame(width: bodyView.size.width-50 , height: bodyView.size.height)
         }
     }
 }
