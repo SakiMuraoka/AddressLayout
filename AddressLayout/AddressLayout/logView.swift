@@ -9,14 +9,11 @@
 import SwiftUI
 
 struct logView: View {
-<<<<<<< HEAD
     @State var searchText = ""
     @State var text = ""
-=======
     @ObservedObject var userName = ViewModel()
-    
     @State var showLogView = false
->>>>>>> master
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -25,14 +22,10 @@ struct logView: View {
                         Image(systemName: "plus")
                     }
                     Text("新規")
-<<<<<<< HEAD
-                    TextField("検索", text: $searchText)
-=======
                     TextField("検索", text: $userName.name)
->>>>>>> master
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     Button(action: {
-                        self.text = self.searchText
+                        self.searchText = self.userName.name
                     }) {
                         Image(systemName: "magnifyingglass")
                     }
@@ -46,7 +39,7 @@ struct logView: View {
                         FilterView(isPresent: self.$showLogView, userName: self.userName)
                     }
                 }
-                itemList(searchText: text)
+                itemList(searchText: searchText)
             }
             .navigationBarTitle("履歴画面", displayMode: .inline)
             .padding()
