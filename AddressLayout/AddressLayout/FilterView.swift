@@ -10,13 +10,9 @@ import SwiftUI
 
 struct FilterView: View {
     @Environment(\.presentationMode) var presentationMode
-    @State private var name = ""
-    @State private var lastname = ""
-    @State private var firstname = ""
-    @State private var isOrganization = true
     @State var showLogView = false
     @Binding var isPresent: Bool
-    @ObservedObject var userName: ViewModel
+    @ObservedObject var filterData: ViewModel
     
     var body: some View {
         VStack{
@@ -24,7 +20,7 @@ struct FilterView: View {
                 HStack{
                     Text("宛名")
                     Spacer()
-                    Picker(selection: self.$isOrganization, label: Text("")){
+                    Picker(selection: $filterData.isOrganization, label: Text("")){
                         Text("個人")
                             .tag(true)
                         Text("組織")
@@ -34,26 +30,79 @@ struct FilterView: View {
                     .frame(width: 100)
                 }
                 HStack {
-                    if self.isOrganization {
-                        TextField("姓/Last name", text: $lastname)
+                    if filterData.isOrganization {
+                        TextField("姓/Last name", text: $filterData.lastname)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                        TextField("名/First name", text: $firstname)
+                        TextField("名/First name", text: $filterData.firstname)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                     }else{
-                        TextField("宛名/name", text: $userName.name)
+                        TextField("宛名/name", text: $filterData.name)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                     }
 
                 }
             }
                 .frame(maxWidth: 300, maxHeight: 100)
-            ZipInputView()
-            AddressInputView()
+            VStack{
+                HStack{
+                    Text("郵便番号")
+                    Spacer()
+                }
+                HStack{
+                    TextField("XXX-XXXX", text: $filterData.zipcode)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                }
+            }
+            .frame(maxWidth: 300, maxHeight: 80)
+           VStack{
+                HStack{
+                    Text("都道府県")
+                    Spacer()
+                }
+            TextField("", text: $filterData.prefecture)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                HStack{
+                    Text("市区町村")
+                    Spacer()
+                }
+            TextField("", text: $filterData.city)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                HStack{
+                    Text("番地")
+                    Spacer()
+                }
+            TextField("", text: $filterData.region)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                HStack{
+                    TextField("", text: $filterData.number1str)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Text("丁目")
+                    TextField("", text: $filterData.number2str)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        Text("番")
+                    TextField("", text: $filterData.number3str)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        Text("号")
+                }
+                HStack{
+                    Text("アパート・マンション/部屋番号")
+                    Spacer()
+                }
+                HStack{
+                    TextField("", text: $filterData.building)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    TextField("", text: $filterData.roomNumberstr)
+                        .frame(width: 50.0)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                }
+            }
+            .frame(maxWidth: 300, maxHeight: 350)
             HStack{
                 Spacer()
                 Button(action: {
-                    self.isPresent = false
-                }) {
+                    self.isPresent = false                }) {
                     Text("完了")
                         .font(.callout)
                         .fontWeight(.heavy)
@@ -70,16 +119,13 @@ struct FilterView: View {
     }
 }
 
-final class ViewModel: ObservableObject {
-    @Published var name = ""
-}
 
 struct BindingViewExamplePreviewContainer_2 : View {
      @State
      private var value = false
 
      var body: some View {
-        FilterView(isPresent: $value, userName: ViewModel())
+        FilterView(isPresent: $value, filterData: ViewModel())
      }
 }
 

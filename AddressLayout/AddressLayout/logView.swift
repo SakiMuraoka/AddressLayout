@@ -9,9 +9,8 @@
 import SwiftUI
 
 struct logView: View {
-    @State var searchText = ""
     @State var text = ""
-    @ObservedObject var userName = ViewModel()
+    @ObservedObject var filterData = ViewModel()
     @State var showLogView = false
     
     var body: some View {
@@ -22,10 +21,12 @@ struct logView: View {
                         Image(systemName: "plus")
                     }
                     Text("新規")
-                    TextField("検索", text: $userName.name)
+                    TextField("検索", text: $text)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     Button(action: {
-                        self.searchText = self.userName.name
+                        self.filterData.searchText = self.text
+                        print("searchText:" + self.filterData.searchText)
+                        print("name:" + self.filterData.name)
                     }) {
                         Image(systemName: "magnifyingglass")
                     }
@@ -36,15 +37,32 @@ struct logView: View {
                     }
                         .sheet(isPresented: self.$showLogView) {
                         // SecondViewを表示
-                        FilterView(isPresent: self.$showLogView, userName: self.userName)
+                        FilterView(isPresent: self.$showLogView, filterData: self.filterData)
                     }
                 }
-                itemList(searchText: searchText)
+                itemList(filterData: self.filterData)
             }
             .navigationBarTitle("履歴画面", displayMode: .inline)
             .padding()
         }
     }    
+}
+
+final class ViewModel: ObservableObject {
+    @Published var name = ""
+    @Published var lastname = ""
+    @Published var firstname = ""
+    @Published var zipcode = ""
+    @Published var prefecture = ""
+    @Published var city = ""
+    @Published var region = ""
+    @Published var number1str = ""
+    @Published var number2str = ""
+    @Published var number3str = ""
+    @Published var building = ""
+    @Published var roomNumberstr = ""
+    @Published var isOrganization = true
+    @Published var searchText = ""
 }
 
 struct logView_Previews: PreviewProvider {
