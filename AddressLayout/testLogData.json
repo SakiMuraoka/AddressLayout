@@ -11,7 +11,7 @@
               "number2": 0,
               "number3": 0,
               "building": "〇〇マンション",
-              "roomNumber": 0,
+              "roomNumber": 0
           },
           "name": "山田,太郎"
       },
@@ -29,7 +29,7 @@
           },
           "name": "田中,花子"
       },
-      "envelopeTypeId": 0,
+      "envelopeTypeId": 2,
       "dates": {
           "year": 2020,
           "month": 9,
@@ -75,5 +75,386 @@
           "date": 15
       },
       "isOrganization": false
+    },
+    {
+      "id": 3,
+      "sender": {
+          "address": {
+              "zipcode": 1960022,
+              "prefecture": "東京都",
+              "city": "昭島市",
+              "region": "中神町",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇ハイツ",
+              "roomNumber": 0
+          },
+          "name": "鈴木,良"
+      },
+      "receiver": {
+          "address": {
+              "zipcode": 4850047,
+              "prefecture": "愛知県",
+              "city": "小牧市",
+              "region": "曙町",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇マンション",
+              "roomNumber": 0
+          },
+          "name": "中川,智子"
+      },
+      "envelopeTypeId": 1,
+      "dates": {
+          "year": 2020,
+          "month": 9,
+          "date": 10
+      },
+      "isOrganization": false
+    },
+    {
+      "id": 4,
+      "sender": {
+          "address": {
+              "zipcode": 9320122,
+              "prefecture": "富山県",
+              "city": "小矢部市",
+              "region": "浅地",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "ハイツ〇〇",
+              "roomNumber": 0
+          },
+          "name": "佐藤,菜々子"
+      },
+      "receiver": {
+          "address": {
+              "zipcode": 6340812,
+              "prefecture": "奈良県",
+              "city": "橿原市",
+              "region": "今井町",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇ビル",
+              "roomNumber": 0
+          },
+          "name": "〇〇株式会社人事部"
+      },
+      "envelopeTypeId": 0,
+      "dates": {
+          "year": 2020,
+          "month": 9,
+          "date": 10
+      },
+      "isOrganization": true
+    },
+    {
+      "id": 5,
+      "sender": {
+          "address": {
+              "zipcode": 6310053,
+              "prefecture": "奈良県",
+              "city": "奈良市",
+              "region": "青垣台",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇",
+              "roomNumber": 0
+          },
+          "name": "木村,工"
+      },
+      "receiver": {
+          "address": {
+              "zipcode": 7692103,
+              "prefecture": "香川県",
+              "city": "さぬき市",
+              "region": "小田",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇マンション",
+              "roomNumber": 0
+          },
+          "name": "小泉,光"
+      },
+      "envelopeTypeId": 0,
+      "dates": {
+          "year": 2020,
+          "month": 9,
+          "date": 10
+      },
+      "isOrganization": false
+    },
+    {
+      "id": 6,
+      "sender": {
+          "address": {
+              "zipcode": 6310053,
+              "prefecture": "奈良県",
+              "city": "奈良市",
+              "region": "青垣台",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇",
+              "roomNumber": 0
+          },
+          "name": "高橋,陽子"
+      },
+      "receiver": {
+          "address": {
+              "zipcode": 2110016,
+              "prefecture": "神奈川県",
+              "city": "川崎市中原区",
+              "region": "市ノ坪",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇ビル",
+              "roomNumber": 0
+          },
+          "name": "〇〇株式会社営業部"
+      },
+      "envelopeTypeId": 1,
+      "dates": {
+          "year": 2020,
+          "month": 8,
+          "date": 20
+      },
+      "isOrganization": true
+    },
+    {
+      "id": 7,
+      "sender": {
+          "address": {
+              "zipcode": 6310053,
+              "prefecture": "奈良県",
+              "city": "奈良市",
+              "region": "青垣台",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇",
+              "roomNumber": 0
+          },
+          "name": "木村,工"
+      },
+      "receiver": {
+          "address": {
+              "zipcode": 5190171,
+              "prefecture": "三重県",
+              "city": "亀山市",
+              "region": "アイリス町",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇ビル",
+              "roomNumber": 0
+          },
+          "name": "〇〇株式会社営業部"
+      },
+      "envelopeTypeId": 2,
+      "dates": {
+          "year": 2020,
+          "month": 3,
+          "date": 10
+      },
+      "isOrganization": true
+    },
+    {
+      "id": 8,
+      "sender": {
+          "address": {
+              "zipcode": 6310053,
+              "prefecture": "奈良県",
+              "city": "奈良市",
+              "region": "青垣台",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇",
+              "roomNumber": 0
+          },
+          "name": "木村,工"
+      },
+      "receiver": {
+          "address": {
+              "zipcode": 9993720,
+              "prefecture": "山形県",
+              "city": "東根市",
+              "region": "さくらんぼ駅前",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇ハイツ",
+              "roomNumber": 0
+          },
+          "name": "小田,香"
+      },
+      "envelopeTypeId": 2,
+      "dates": {
+          "year": 2020,
+          "month": 9,
+          "date": 10
+      },
+      "isOrganization": false
+    },
+    {
+      "id": 9,
+      "sender": {
+          "address": {
+              "zipcode": 6310053,
+              "prefecture": "奈良県",
+              "city": "奈良市",
+              "region": "青垣台",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇",
+              "roomNumber": 0
+          },
+          "name": "木村,工"
+      },
+      "receiver": {
+          "address": {
+              "zipcode": 7692103,
+              "prefecture": "香川県",
+              "city": "さぬき市",
+              "region": "小田",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇ビル",
+              "roomNumber": 0
+          },
+          "name": "〇〇株式会社営業部"
+      },
+      "envelopeTypeId": 2,
+      "dates": {
+          "year": 2020,
+          "month": 11,
+          "date": 2
+      },
+      "isOrganization": true
+    },
+    {
+      "id": 10,
+      "sender": {
+          "address": {
+              "zipcode": 6310053,
+              "prefecture": "奈良県",
+              "city": "奈良市",
+              "region": "青垣台",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇マンション",
+              "roomNumber": 0
+          },
+          "name": "木村,工"
+      },
+      "receiver": {
+          "address": {
+              "zipcode": 1650026,
+              "prefecture": "東京都",
+              "city": "中野区",
+              "region": "新井",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇ビル",
+              "roomNumber": 0
+          },
+          "name": "刈谷,浩介"
+      },
+      "envelopeTypeId": 2,
+      "dates": {
+          "year": 2020,
+          "month": 2,
+          "date": 21
+      },
+      "isOrganization": false
+    },
+    {
+      "id": 11,
+      "sender": {
+          "address": {
+              "zipcode": 6310053,
+              "prefecture": "奈良県",
+              "city": "奈良市",
+              "region": "青垣台",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇マンション",
+              "roomNumber": 0
+          },
+          "name": "村上,良子"
+      },
+      "receiver": {
+          "address": {
+              "zipcode": 2100847,
+              "prefecture": "神奈川県",
+              "city": "川崎市川崎区",
+              "region": "浅田",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇マンション",
+              "roomNumber": 0
+          },
+          "name": "角田,健"
+      },
+      "envelopeTypeId": 2,
+      "dates": {
+          "year": 2020,
+          "month": 9,
+          "date": 10
+      },
+      "isOrganization": false
+    },
+    {
+      "id": 12,
+      "sender": {
+          "address": {
+              "zipcode": 6310053,
+              "prefecture": "奈良県",
+              "city": "奈良市",
+              "region": "青垣台",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇マンション",
+              "roomNumber": 0
+          },
+          "name": "村上,良子"
+      },
+      "receiver": {
+          "address": {
+              "zipcode": 3120056,
+              "prefecture": "茨城県",
+              "city": "ひたちなか市",
+              "region": "青葉町",
+              "number1": 0,
+              "number2": 0,
+              "number3": 0,
+              "building": "〇〇ビル",
+              "roomNumber": 0
+          },
+          "name": "株式会社〇〇人事部新卒採用担当"
+      },
+      "envelopeTypeId": 2,
+      "dates": {
+          "year": 2020,
+          "month": 10,
+          "date": 1
+      },
+      "isOrganization": true
     }
+    
 ]
