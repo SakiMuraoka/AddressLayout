@@ -55,7 +55,7 @@ func filter(text: String, LogData: Log, filterData: filterViewModel) -> Bool{
             }
         }
         if(isHidden){
-            if(filterData.zipcode != "" && Int(filterData.zipcode) != LogData.receiver.address.zipcode){
+            if(filterData.zipcode != "" && filterData.zipcode != LogData.receiver.address.zipcode){
                 isHidden.toggle()
             }else{
                 if(filterData.prefecture != "" && filterData.prefecture != LogData.receiver.address.prefecture){
@@ -97,7 +97,7 @@ func filter(text: String, LogData: Log, filterData: filterViewModel) -> Bool{
 
 struct itemList_Previews: PreviewProvider {
     static var previews: some View {
-        itemList(filterData: filterViewModel())
+        itemList(filterData: filterViewModel(), envelopeData: logViewModel())
     }
 }
 

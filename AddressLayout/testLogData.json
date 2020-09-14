@@ -80,7 +80,7 @@
       "id": 3,
       "sender": {
           "address": {
-              "zipcode": 1960022,
+              "zipcode": "196-0022",
               "prefecture": "東京都",
               "city": "昭島市",
               "region": "中神町",
@@ -94,7 +94,7 @@
       },
       "receiver": {
           "address": {
-              "zipcode": 4850047,
+              "zipcode": "485-0047",
               "prefecture": "愛知県",
               "city": "小牧市",
               "region": "曙町",
@@ -118,7 +118,7 @@
       "id": 4,
       "sender": {
           "address": {
-              "zipcode": 9320122,
+              "zipcode": "932-0122",
               "prefecture": "富山県",
               "city": "小矢部市",
               "region": "浅地",
@@ -132,7 +132,7 @@
       },
       "receiver": {
           "address": {
-              "zipcode": 6340812,
+              "zipcode": "634-0812",
               "prefecture": "奈良県",
               "city": "橿原市",
               "region": "今井町",
@@ -156,7 +156,7 @@
       "id": 5,
       "sender": {
           "address": {
-              "zipcode": 6310053,
+              "zipcode": "631-0053",
               "prefecture": "奈良県",
               "city": "奈良市",
               "region": "青垣台",
@@ -170,7 +170,7 @@
       },
       "receiver": {
           "address": {
-              "zipcode": 7692103,
+              "zipcode": "769-2103",
               "prefecture": "香川県",
               "city": "さぬき市",
               "region": "小田",
@@ -194,7 +194,7 @@
       "id": 6,
       "sender": {
           "address": {
-              "zipcode": 6310053,
+              "zipcode": "631-0053",
               "prefecture": "奈良県",
               "city": "奈良市",
               "region": "青垣台",
@@ -208,7 +208,7 @@
       },
       "receiver": {
           "address": {
-              "zipcode": 2110016,
+              "zipcode": "211-0016",
               "prefecture": "神奈川県",
               "city": "川崎市中原区",
               "region": "市ノ坪",
@@ -232,7 +232,7 @@
       "id": 7,
       "sender": {
           "address": {
-              "zipcode": 6310053,
+              "zipcode": "631-0053",
               "prefecture": "奈良県",
               "city": "奈良市",
               "region": "青垣台",
@@ -246,7 +246,7 @@
       },
       "receiver": {
           "address": {
-              "zipcode": 5190171,
+              "zipcode": "519-0171",
               "prefecture": "三重県",
               "city": "亀山市",
               "region": "アイリス町",
@@ -270,7 +270,7 @@
       "id": 8,
       "sender": {
           "address": {
-              "zipcode": 6310053,
+              "zipcode": "631-0053",
               "prefecture": "奈良県",
               "city": "奈良市",
               "region": "青垣台",
@@ -284,7 +284,7 @@
       },
       "receiver": {
           "address": {
-              "zipcode": 9993720,
+              "zipcode": "999-3720",
               "prefecture": "山形県",
               "city": "東根市",
               "region": "さくらんぼ駅前",
@@ -308,7 +308,7 @@
       "id": 9,
       "sender": {
           "address": {
-              "zipcode": 6310053,
+              "zipcode": "631-0053",
               "prefecture": "奈良県",
               "city": "奈良市",
               "region": "青垣台",
@@ -322,7 +322,7 @@
       },
       "receiver": {
           "address": {
-              "zipcode": 7692103,
+              "zipcode": "769-2103",
               "prefecture": "香川県",
               "city": "さぬき市",
               "region": "小田",
@@ -346,7 +346,7 @@
       "id": 10,
       "sender": {
           "address": {
-              "zipcode": 6310053,
+              "zipcode": "631-0053",
               "prefecture": "奈良県",
               "city": "奈良市",
               "region": "青垣台",
@@ -360,7 +360,7 @@
       },
       "receiver": {
           "address": {
-              "zipcode": 1650026,
+              "zipcode": "165-0026",
               "prefecture": "東京都",
               "city": "中野区",
               "region": "新井",
@@ -384,7 +384,7 @@
       "id": 11,
       "sender": {
           "address": {
-              "zipcode": 6310053,
+              "zipcode": "631-0053",
               "prefecture": "奈良県",
               "city": "奈良市",
               "region": "青垣台",
@@ -398,7 +398,7 @@
       },
       "receiver": {
           "address": {
-              "zipcode": 2100847,
+              "zipcode": "210-0847",
               "prefecture": "神奈川県",
               "city": "川崎市川崎区",
               "region": "浅田",
@@ -422,7 +422,7 @@
       "id": 12,
       "sender": {
           "address": {
-              "zipcode": 6310053,
+              "zipcode": "631-0053",
               "prefecture": "奈良県",
               "city": "奈良市",
               "region": "青垣台",
@@ -436,7 +436,7 @@
       },
       "receiver": {
           "address": {
-              "zipcode": 3120056,
+              "zipcode": "312-0056",
               "prefecture": "茨城県",
               "city": "ひたちなか市",
               "region": "青葉町",

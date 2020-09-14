@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		411BE043250DC405009A2030 /* EnvelopeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE042250DC405009A2030 /* EnvelopeData.swift */; };
+		411BE047250F166F009A2030 /* Naga3EnvelopeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE046250F166F009A2030 /* Naga3EnvelopeView.swift */; };
+		411BE049250F1861009A2030 /* Naga40EnvelopeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE048250F1861009A2030 /* Naga40EnvelopeView.swift */; };
+		411BE04B250F190E009A2030 /* Kaku3EnvelopeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE04A250F190E009A2030 /* Kaku3EnvelopeView.swift */; };
 		4132E54F2508BCDA00FDEA76 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132E54E2508BCDA00FDEA76 /* PreviewView.swift */; };
 		4132E555250B554F00FDEA76 /* ActualSizeEnvelopeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132E554250B554F00FDEA76 /* ActualSizeEnvelopeView.swift */; };
 		8A16B54324AEB96FB83B4B8F /* Pods_AddressLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C74F46B87737B8ACD262A31 /* Pods_AddressLayout.framework */; };
@@ -37,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		411BE042250DC405009A2030 /* EnvelopeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvelopeData.swift; sourceTree = "<group>"; };
+		411BE046250F166F009A2030 /* Naga3EnvelopeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Naga3EnvelopeView.swift; sourceTree = "<group>"; };
+		411BE048250F1861009A2030 /* Naga40EnvelopeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Naga40EnvelopeView.swift; sourceTree = "<group>"; };
+		411BE04A250F190E009A2030 /* Kaku3EnvelopeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kaku3EnvelopeView.swift; sourceTree = "<group>"; };
 		4132E54E2508BCDA00FDEA76 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		4132E554250B554F00FDEA76 /* ActualSizeEnvelopeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualSizeEnvelopeView.swift; sourceTree = "<group>"; };
 		5575DC1E6D0B6578E26E0A6B /* Pods-AddressLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddressLayout.debug.xcconfig"; path = "Target Support Files/Pods-AddressLayout/Pods-AddressLayout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +136,9 @@
 				CF0052E42507C54400458C7B /* logView.swift */,
 				4132E54E2508BCDA00FDEA76 /* PreviewView.swift */,
 				4132E554250B554F00FDEA76 /* ActualSizeEnvelopeView.swift */,
+				411BE04A250F190E009A2030 /* Kaku3EnvelopeView.swift */,
+				411BE046250F166F009A2030 /* Naga3EnvelopeView.swift */,
+				411BE048250F1861009A2030 /* Naga40EnvelopeView.swift */,
 				CF0052C7250732DE00458C7B /* AppDelegate.swift */,
 				CF0052C9250732DE00458C7B /* SceneDelegate.swift */,
 				CF0052CB250732DE00458C7B /* ContentView.swift */,
@@ -205,7 +214,6 @@
 			);
 			mainGroup = CF0052BB250732DE00458C7B;
 			packageReferences = (
-				CF65FFD7250E3431000FE0E7 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
 			);
 			productRefGroup = CF0052C5250732DE00458C7B /* Products */;
 			projectDirPath = "";
@@ -284,6 +292,7 @@
 				CFBD58E62509F20F0099BF94 /* Log.swift in Sources */,
 				CF0052E32507C37B00458C7B /* itemList.swift in Sources */,
 				4132E555250B554F00FDEA76 /* ActualSizeEnvelopeView.swift in Sources */,
+				411BE04B250F190E009A2030 /* Kaku3EnvelopeView.swift in Sources */,
 				D6A4B573250A16D800864759 /* ZipInputView.swift in Sources */,
 				4132E54F2508BCDA00FDEA76 /* PreviewView.swift in Sources */,
 				D6A4B579250B3E0A00864759 /* InputView.swift in Sources */,
@@ -298,6 +307,8 @@
 				CFD8A1FD250C9E2300593F8A /* FilterView.swift in Sources */,
 				CF0052E52507C54400458C7B /* logView.swift in Sources */,
 				CFBD58E82509F4E00099BF94 /* Data.swift in Sources */,
+				411BE047250F166F009A2030 /* Naga3EnvelopeView.swift in Sources */,
+				411BE049250F1861009A2030 /* Naga40EnvelopeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +450,7 @@
 				DEVELOPMENT_TEAM = H3ZXJ4GU5R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AddressLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,6 +472,7 @@
 				DEVELOPMENT_TEAM = H3ZXJ4GU5R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AddressLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
