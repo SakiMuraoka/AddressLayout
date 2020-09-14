@@ -50,6 +50,7 @@ struct InputView: View {
                     let newEnvelopeInfo = EnvelopeInformation()
                     newEnvelopeInfo.address = newEnvelopeAddress
                     newEnvelopeInfo.name    = self.name
+                    newEnvelopeInfo.isOrganization   = self.isOrganization
                     
                     let newEnvelopeDate = EnvelopeDate()
                     newEnvelopeDate.date  = 14
@@ -62,7 +63,6 @@ struct InputView: View {
                     newEnvelopeData.sender           = nil
                     newEnvelopeData.envelopeTypeId   = 0
                     newEnvelopeData.dates            = newEnvelopeDate
-                    newEnvelopeData.isOrganization   = self.isOrganization
                     
                     let realm = try? Realm()
                     try? realm?.write{

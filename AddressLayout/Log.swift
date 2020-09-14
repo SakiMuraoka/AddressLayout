@@ -14,12 +14,12 @@ struct Log: Hashable, Codable, Identifiable {
     var receiver: Information
     var envelopeTypeId: Int
     var dates: Dates
-    var isOrganization: Bool
 }
 
 struct Information: Hashable, Codable {
     var address: Address
     var name: String
+    var isOrganization: Bool
 }
 
 struct Dates: Hashable, Codable {

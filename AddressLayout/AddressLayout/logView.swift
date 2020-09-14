@@ -42,7 +42,7 @@ struct logView: View {
                         FilterView(isPresent: self.$showLogView, filterData: self.filterData)
                     }
                 }
-                itemList(filterData: self.filterData, envelopeData: self.envelopeData)
+                itemList(filterData: self.filterData, envelopeData: envelopeData)
             }
             .navigationBarTitle("履歴画面", displayMode: .inline)
             .padding()
