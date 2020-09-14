@@ -13,7 +13,7 @@ struct PreviewView: View {
 
     
     @State private var isReverse = false
-    @State private var isActualDisplay = false
+    @State private var isActualDisplay = true
     @ObservedObject private var envelopeTypeViewModel: EnvelopeTypeViewModel = .init()
 
     var logData: Log
@@ -34,8 +34,10 @@ struct PreviewView: View {
 
                     
 // MARK: -　封筒の部分
-                    ScrollView([.horizontal, .vertical], showsIndicators: true) {
-                        ActualSizeEnvelopeView()
+                    ZStack{
+                        ActualSizeEnvelopeView(envelopeTypeViewModel: self.envelopeTypeViewModel).opacity(self.isActualDisplay ? 1.0 : 0.0)
+                            
+                        InputView(address: testLogData[0].sender.address).opacity(self.isActualDisplay ? 0.0 : 1.0)
                     }
                     
 // MARK: - 封筒サイズ変更ボタンと共有ボタン
