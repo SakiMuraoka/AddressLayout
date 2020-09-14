@@ -12,7 +12,8 @@ import CoreText
 
 struct Kaku3EnvelopeView: View {
     @ObservedObject var envelopeTypeViewModel: EnvelopeTypeViewModel
-
+    @ObservedObject var information: InformationViewModel
+    
     var body: some View {
         GeometryReader { bodyView in
             ZStack(){
@@ -23,7 +24,7 @@ struct Kaku3EnvelopeView: View {
                         
                         
                     VStack(alignment: .trailing) {
-                        Text("305-0001")
+                        Text(self.information.information.address?.zipcode ?? "")
                             .font(.system(size:18, weight: .black, design: .default))
                             .fontWeight(.medium)
                             .foregroundColor(Color.black)
@@ -31,21 +32,16 @@ struct Kaku3EnvelopeView: View {
                             .frame(width: 120, height: 40)
                             .offset(x: 140 , y: 10)
                         HStack(alignment: .top) {
-                            TategakiText(text: """
-                            IPLAB ユビキタスチーム様
-                            """
+                            TategakiText(text: self.information.information.name
                                 ,fontSize: 20
                             ).frame(width: 50.0)
                                 .offset(x: 90 , y: 15)
-                            TategakiText(text: """
-                            総合研究棟B0926
-                            """
+                            TategakiText(text:
+                                self.information.information.address?.building ?? ""
                                 , fontSize: 15
                             ).frame(width:30.0)
                                 .offset(x: 110 , y: 15)
-                            TategakiText(text: """
-                            茨城県つくば市天王台1-1-1
-                            """
+                            TategakiText(text: self.getAddress(address: self.information.information.address ?? EnvelopeAddress())
                                 ,fontSize: 15
                             ).frame(width: 30.0)
                             .offset(x: 110 , y: 15)
@@ -60,12 +56,15 @@ struct Kaku3EnvelopeView: View {
                 .frame(width: 325, height: 600)
         }
     }
+    func getAddress(address: EnvelopeAddress) -> String {
+        address.prefecture + address.city + address.region
+    }
 }
 
 struct Kaku3EnvelopeView_Previews: PreviewProvider {
     static var previews: some View {
          ForEach(["iPhone 11"], id: \.self) { deviceName in
-            Kaku3EnvelopeView(envelopeTypeViewModel: EnvelopeTypeViewModel.init(selectedId: 0))
+            Kaku3EnvelopeView(envelopeTypeViewModel: EnvelopeTypeViewModel.init(selectedId: 0), information: InformationViewModel())
                }
     }
 }

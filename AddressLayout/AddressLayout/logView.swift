@@ -20,7 +20,7 @@ struct logView: View {
         NavigationView {
             VStack {
                 HStack {
-                    NavigationLink(destination: InputView(information: currentEnvelopeData.receiverInformationVM)){
+                    NavigationLink(destination: InputView(currentEnvelopeData: currentEnvelopeData, information: currentEnvelopeData.receiverInformationVM)){
                         Image(systemName: "plus")
                     }
                     Text("新規")

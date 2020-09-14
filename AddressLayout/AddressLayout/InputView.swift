@@ -23,6 +23,7 @@ struct InputView: View {
     @State var lastname: String = ""
     @State var firstname: String = ""
     @State var isOrganization: Bool = true
+    @ObservedObject var currentEnvelopeData: EnvelopeDataViewModel
     @ObservedObject var information: InformationViewModel
     
     var body: some View {
@@ -32,67 +33,69 @@ struct InputView: View {
             AddressInputView(prefecture: $prefecture, city: $city, region: $region, number1str: $number1str, number2str: $number2str, number3str: $number3str, building: $building, roomNumberstr: $roomNumberstr)
             HStack{
                 Spacer()
-                Button(action: {
-                    let newEnvelopeAddress = EnvelopeAddress()
-                    newEnvelopeAddress.zipcode    = self.zipcode
-                    newEnvelopeAddress.prefecture = self.prefecture
-                    newEnvelopeAddress.city       = self.city
-                    newEnvelopeAddress.region     = self.region
-                    newEnvelopeAddress.number1    = Int(self.number1str) ?? 0
-                    newEnvelopeAddress.number2    = Int(self.number2str) ?? 0
-                    newEnvelopeAddress.number3    = Int(self.number3str) ?? 0
-                    newEnvelopeAddress.building   = self.building
-                    newEnvelopeAddress.roomNumber = Int(self.roomNumberstr) ?? 0
-                    
-                    let newEnvelopeInfo = EnvelopeInformation()
-                    newEnvelopeInfo.address = newEnvelopeAddress
-                    newEnvelopeInfo.name    = self.name
-                    newEnvelopeInfo.isOrganization   = self.isOrganization
-                    
-                    self.information.setup(information: newEnvelopeInfo)
-                    
-//                    let newEnvelopeDate = EnvelopeDate()
-//                    newEnvelopeDate.date  = 14
-//                    newEnvelopeDate.month = 9
-//                    newEnvelopeDate.year  = 2020
-//
-//                    let newEnvelopeData = EnvelopeData()
-//                    newEnvelopeData.id               = 0
-//                    newEnvelopeData.receiver         = newEnvelopeInfo
-//                    newEnvelopeData.sender           = nil
-//                    newEnvelopeData.envelopeTypeId   = 0
-//                    newEnvelopeData.dates            = newEnvelopeDate
-                    
-//                    let realm = try? Realm()
-//                    try? realm?.write{
-//                        realm?.add(newEnvelopeData)
-//                        print(newEnvelopeData)
-//                    }
-                    
-                    // デバッグ用
-//                    let results = realm?.objects(EnvelopeData.self)
-//                    print(results ?? "null")
-//                    print(newEnvelopeAddress.number1)
-                }) {
-                    Text("完了")
-                        .font(.callout)
-                        .fontWeight(.heavy)
-                        .padding(7)
-                        .foregroundColor(Color.white)
-                        .background(Color.blue)
-                        .cornerRadius(5)
+                NavigationLink(destination: PreviewView(currentEnvelopeData: currentEnvelopeData)){
+                    Button(action: {
+                        let newEnvelopeAddress = EnvelopeAddress()
+                        newEnvelopeAddress.zipcode    = self.zipcode
+                        newEnvelopeAddress.prefecture = self.prefecture
+                        newEnvelopeAddress.city       = self.city
+                        newEnvelopeAddress.region     = self.region
+                        newEnvelopeAddress.number1    = Int(self.number1str) ?? 0
+                        newEnvelopeAddress.number2    = Int(self.number2str) ?? 0
+                        newEnvelopeAddress.number3    = Int(self.number3str) ?? 0
+                        newEnvelopeAddress.building   = self.building
+                        newEnvelopeAddress.roomNumber = Int(self.roomNumberstr) ?? 0
+                        
+                        let newEnvelopeInfo = EnvelopeInformation()
+                        newEnvelopeInfo.address = newEnvelopeAddress
+                        newEnvelopeInfo.name    = self.information.information.name
+                        newEnvelopeInfo.isOrganization   = self.isOrganization
+                        
+                        self.information.setup(information: newEnvelopeInfo)
+                        
+                        //                    let newEnvelopeDate = EnvelopeDate()
+                        //                    newEnvelopeDate.date  = 14
+                        //                    newEnvelopeDate.month = 9
+                        //                    newEnvelopeDate.year  = 2020
+                        //
+                        //                    let newEnvelopeData = EnvelopeData()
+                        //                    newEnvelopeData.id               = 0
+                        //                    newEnvelopeData.receiver         = newEnvelopeInfo
+                        //                    newEnvelopeData.sender           = nil
+                        //                    newEnvelopeData.envelopeTypeId   = 0
+                        //                    newEnvelopeData.dates            = newEnvelopeDate
+                        
+                        //                    let realm = try? Realm()
+                        //                    try? realm?.write{
+                        //                        realm?.add(newEnvelopeData)
+                        //                        print(newEnvelopeData)
+                        //                    }
+                        
+                        // デバッグ用
+                        //                    let results = realm?.objects(EnvelopeData.self)
+                        //                    print(results ?? "null")
+                        //                    print(newEnvelopeAddress.number1)
+                    }) {
+                        Text("完了")
+                            .font(.callout)
+                            .fontWeight(.heavy)
+                            .padding(7)
+                            .foregroundColor(Color.white)
+                            .background(Color.blue)
+                            .cornerRadius(5)
+                    }
+                    .padding(.trailing, 40.0)
                 }
-                .padding(.trailing, 40.0)
             }
             Spacer()
         }
-
+            
         .padding()    }
-
+    
 }
 
 struct InputView_Previews: PreviewProvider {
     static var previews: some View {
-        InputView(information: EnvelopeDataViewModel().senderInformationVM)
+        InputView(currentEnvelopeData: EnvelopeDataViewModel(), information: EnvelopeDataViewModel().senderInformationVM)
     }
 }

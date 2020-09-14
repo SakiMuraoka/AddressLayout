@@ -13,11 +13,12 @@ import CoreText
 
 struct ActualSizeEnvelopeView: View {
     @ObservedObject var envelopeTypeViewModel: EnvelopeTypeViewModel
+    @ObservedObject var information: InformationViewModel
     
     var body: some View {
         Group {
             if envelopeTypeViewModel.selectedId == 0 {
-                Kaku3EnvelopeView(envelopeTypeViewModel: envelopeTypeViewModel)
+                Kaku3EnvelopeView(envelopeTypeViewModel: envelopeTypeViewModel, information: information)
             }
             else if envelopeTypeViewModel.selectedId == 1 {
                 Naga3EnvelopeView(envelopeTypeViewModel: envelopeTypeViewModel)
@@ -31,6 +32,6 @@ struct ActualSizeEnvelopeView: View {
 
 struct ActualSizeEnvelopeView_Previews: PreviewProvider {
     static var previews: some View {
-        ActualSizeEnvelopeView(envelopeTypeViewModel: EnvelopeTypeViewModel.init(selectedId: 2))
+        ActualSizeEnvelopeView(envelopeTypeViewModel: EnvelopeTypeViewModel.init(selectedId: 2), information: InformationViewModel())
     }
 }

@@ -33,20 +33,24 @@ struct PreviewView: View {
                     
 // MARK: -　封筒の部分
                     ZStack{
-                        ActualSizeEnvelopeView(envelopeTypeViewModel: self.envelopeTypeViewModel).opacity(self.isActualDisplay ? 1.0 : 0.0)
-                            
+                        if self.isReverse{
+                            ActualSizeEnvelopeView(envelopeTypeViewModel: self.envelopeTypeViewModel, information: self.currentEnvelopeData.senderInformationVM)
+                        }else{
+                            ActualSizeEnvelopeView(envelopeTypeViewModel: self.envelopeTypeViewModel, information: self.currentEnvelopeData.receiverInformationVM)
+                        }
+                        
 //                        InputView(address: testLogData[0].sender.address).opacity(self.isActualDisplay ? 0.0 : 1.0)
                     }
                     
 // MARK: - 封筒サイズ変更ボタンと共有ボタン
                     HStack{
                         if self.isReverse{
-                            NavigationLink(destination: InputView(information: self.currentEnvelopeData.senderInformationVM)){
+                            NavigationLink(destination: InputView(currentEnvelopeData: self.currentEnvelopeData, information: self.currentEnvelopeData.senderInformationVM)){
                                 Image(systemName: "square.and.pencil")
                             }
                             .padding(.leading, 40.0)
                         }else{
-                            NavigationLink(destination: InputView(information: self.currentEnvelopeData.receiverInformationVM)){
+                            NavigationLink(destination: InputView(currentEnvelopeData: self.currentEnvelopeData, information: self.currentEnvelopeData.receiverInformationVM)){
                                 Image(systemName: "square.and.pencil")
                             }
                             .padding(.leading, 40.0)

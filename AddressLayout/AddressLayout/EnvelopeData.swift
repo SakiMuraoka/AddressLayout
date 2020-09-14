@@ -10,8 +10,8 @@ import RealmSwift
 
 class EnvelopeData: Object{
     dynamic var id: String = UUID().uuidString
-    dynamic var sender: EnvelopeInformation?
-    dynamic var receiver: EnvelopeInformation?
+    dynamic var sender: EnvelopeInformation? = EnvelopeInformation()
+    dynamic var receiver: EnvelopeInformation? = EnvelopeInformation()
     dynamic var envelopeTypeId: Int = 0
     dynamic var dates: EnvelopeDate?
 
