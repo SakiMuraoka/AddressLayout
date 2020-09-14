@@ -27,6 +27,8 @@
 		CFBD58E62509F20F0099BF94 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBD58E52509F20F0099BF94 /* Log.swift */; };
 		CFBD58E82509F4E00099BF94 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBD58E72509F4E00099BF94 /* Data.swift */; };
 		CFD8A1FD250C9E2300593F8A /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD8A1FC250C9E2300593F8A /* FilterView.swift */; };
+		D6294B78250E997400B48E8A /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6294B77250E997400B48E8A /* InformationViewModel.swift */; };
+		D6294B7A250EA39600B48E8A /* EnvelopeDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6294B79250EA39600B48E8A /* EnvelopeDataViewModel.swift */; };
 		D664194E250C731D008671A7 /* EnvelopeTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D664194D250C731D008671A7 /* EnvelopeTypeViewModel.swift */; };
 		D6A4B5692509D5B100864759 /* EnvelopeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A4B5682509D5B100864759 /* EnvelopeView.swift */; };
 		D6A4B56B2509D90200864759 /* EnvelopeTypeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A4B56A2509D90200864759 /* EnvelopeTypeItem.swift */; };
@@ -62,6 +64,8 @@
 		CFBD58E52509F20F0099BF94 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		CFBD58E72509F4E00099BF94 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		CFD8A1FC250C9E2300593F8A /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		D6294B77250E997400B48E8A /* InformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewModel.swift; sourceTree = "<group>"; };
+		D6294B79250EA39600B48E8A /* EnvelopeDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvelopeDataViewModel.swift; sourceTree = "<group>"; };
 		D664194D250C731D008671A7 /* EnvelopeTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvelopeTypeViewModel.swift; sourceTree = "<group>"; };
 		D6A4B5682509D5B100864759 /* EnvelopeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvelopeView.swift; sourceTree = "<group>"; };
 		D6A4B56A2509D90200864759 /* EnvelopeTypeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvelopeTypeItem.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 		CF0052C6250732DE00458C7B /* AddressLayout */ = {
 			isa = PBXGroup;
 			children = (
+				D6294B77250E997400B48E8A /* InformationViewModel.swift */,
+				D6294B79250EA39600B48E8A /* EnvelopeDataViewModel.swift */,
 				CF0052E02507BE2800458C7B /* itemRow.swift */,
 				CF0052E22507C37B00458C7B /* itemList.swift */,
 				411BE042250DC405009A2030 /* EnvelopeData.swift */,
@@ -290,6 +296,7 @@
 				CF0052C8250732DE00458C7B /* AppDelegate.swift in Sources */,
 				D6A4B577250A1F4200864759 /* PersonInputView.swift in Sources */,
 				CFBD58E62509F20F0099BF94 /* Log.swift in Sources */,
+				D6294B7A250EA39600B48E8A /* EnvelopeDataViewModel.swift in Sources */,
 				CF0052E32507C37B00458C7B /* itemList.swift in Sources */,
 				4132E555250B554F00FDEA76 /* ActualSizeEnvelopeView.swift in Sources */,
 				411BE04B250F190E009A2030 /* Kaku3EnvelopeView.swift in Sources */,
@@ -300,6 +307,7 @@
 				D664194E250C731D008671A7 /* EnvelopeTypeViewModel.swift in Sources */,
 				CF0052CC250732DE00458C7B /* ContentView.swift in Sources */,
 				411BE043250DC405009A2030 /* EnvelopeData.swift in Sources */,
+				D6294B78250E997400B48E8A /* InformationViewModel.swift in Sources */,
 				CF0052E12507BE2800458C7B /* itemRow.swift in Sources */,
 				D6A4B57D250B668F00864759 /* Envelope.swift in Sources */,
 				D6A4B5692509D5B100864759 /* EnvelopeView.swift in Sources */,

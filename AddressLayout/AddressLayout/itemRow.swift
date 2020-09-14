@@ -9,14 +9,14 @@
 import SwiftUI
 
 struct itemRow: View {
-    var LogData: Log
+    @State var LogData: EnvelopeData
     var body: some View {
         HStack{
             Image("envelope")
                 .resizable()
                 .frame(width: 50, height: 50)
             VStack(alignment: .leading) {
-                Text(LogData.receiver.address.prefecture + LogData.receiver.address.city + LogData.receiver.address.region)
+                Text(self.getAddress(address: self.LogData.receiver?.address ?? EnvelopeAddress()))
                     .font(.headline)
                 HStack {
                     Text("封筒タイプ:")
@@ -24,7 +24,7 @@ struct itemRow: View {
                     Text(String(LogData.envelopeTypeId))
                         .font(.subheadline)
                     Spacer()
-                    Text(String(LogData.dates.month) + "月" + String(LogData.dates.date) + "日")
+                    Text(self.getDate(date: self.LogData.dates ?? EnvelopeDate()))
                         .font(.caption)
                 }
             }
@@ -32,11 +32,17 @@ struct itemRow: View {
         }
         
     }
+    func getAddress(address: EnvelopeAddress) -> String {
+        address.prefecture + address.city + address.region
+    }
+    func getDate(date: EnvelopeDate) -> String{
+        String(date.month) + "月" + String(date.date) + "日"
+    }
 }
 
 struct itemRow_Previews: PreviewProvider {
     static var previews: some View {
-        itemRow(LogData: testLogData[0])
+        itemRow(LogData: EnvelopeData())
             .previewLayout(.fixed(width: 300, height: 70))
     }
 }

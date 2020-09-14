@@ -9,14 +9,12 @@
 import SwiftUI
 
 struct PreviewView: View {
-    
 
-    
     @State private var isReverse = false
     @State private var isActualDisplay = true
     @ObservedObject private var envelopeTypeViewModel: EnvelopeTypeViewModel = .init()
-
-    var logData: Log
+    @ObservedObject var currentEnvelopeData: EnvelopeDataViewModel
+    
     var body: some View {
         GeometryReader { bodyView in
                 VStack(alignment: .center) {
@@ -42,10 +40,17 @@ struct PreviewView: View {
                     
 // MARK: - 封筒サイズ変更ボタンと共有ボタン
                     HStack{
-                        NavigationLink(destination: InputView(address: self.logData.sender.address)){
-                            Image(systemName: "square.and.pencil")
+                        if self.isReverse{
+                            NavigationLink(destination: InputView(information: self.currentEnvelopeData.senderInformationVM)){
+                                Image(systemName: "square.and.pencil")
+                            }
+                            .padding(.leading, 40.0)
+                        }else{
+                            NavigationLink(destination: InputView(information: self.currentEnvelopeData.receiverInformationVM)){
+                                Image(systemName: "square.and.pencil")
+                            }
+                            .padding(.leading, 40.0)
                         }
-                        .padding(.leading, 40.0)
                         Spacer()
                         Button(action: {
                             // TODO: 封筒のサイズ変更機能のViewと接続
@@ -66,7 +71,6 @@ struct PreviewView: View {
                 .padding(.top)
             }
             .navigationBarTitle(Text("プレビュー"), displayMode: .inline)
-
         }
     }
 }
@@ -74,7 +78,8 @@ struct PreviewView: View {
 struct PreviewView_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(["iPhone SE (2nd generation)", "iPhone 11"], id: \.self) { deviceName in
-            PreviewView(logData: testLogData[0])
+//            PreviewView(logData: testLogData[0])  // テスト用
+            PreviewView(currentEnvelopeData: EnvelopeDataViewModel())
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }

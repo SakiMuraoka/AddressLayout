@@ -13,13 +13,14 @@ struct logView: View {
     @State var text = ""
     @ObservedObject var envelopeData = logViewModel()
     @ObservedObject var filterData = filterViewModel()
+    @ObservedObject var currentEnvelopeData: EnvelopeDataViewModel = EnvelopeDataViewModel()
     @State var showLogView = false
     
     var body: some View {
         NavigationView {
             VStack {
                 HStack {
-                    NavigationLink(destination: InputView(address: testLogData[0].sender.address)){
+                    NavigationLink(destination: InputView(information: currentEnvelopeData.receiverInformationVM)){
                         Image(systemName: "plus")
                     }
                     Text("新規")
@@ -42,7 +43,7 @@ struct logView: View {
                         FilterView(isPresent: self.$showLogView, filterData: self.filterData)
                     }
                 }
-                itemList(filterData: self.filterData, envelopeData: envelopeData)
+                itemList(filterData: self.filterData, envelopeData: envelopeData, currentEnvelopeData: currentEnvelopeData)
             }
             .navigationBarTitle("履歴画面", displayMode: .inline)
             .padding()
