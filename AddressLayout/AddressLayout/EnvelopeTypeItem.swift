@@ -41,7 +41,7 @@ struct EnvelopeTypeItem_Previews: PreviewProvider {
     static var previews: some View {
         Group{
             EnvelopeTypeItem(envelope: envelopeData[0], isSelected: true)
-            EnvelopeTypeItem(envelope: envelopeData[0], isSelected: false)
+            EnvelopeTypeItem(envelope: envelopeData[1], isSelected: false)
         }
         .previewLayout(.fixed(width: 120, height: 150))
     }

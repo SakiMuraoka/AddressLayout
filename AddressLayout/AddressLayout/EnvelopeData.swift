@@ -9,19 +9,20 @@ import RealmSwift
 
 
 class EnvelopeData: Object{
-    dynamic var id: Int = 0
+    dynamic var id: String = UUID().uuidString
     dynamic var sender: EnvelopeInformation?
     dynamic var receiver: EnvelopeInformation?
     dynamic var envelopeTypeId: Int = 0
     dynamic var dates: EnvelopeDate?
+
     
     static var realm = try! Realm()
 }
 
 class EnvelopeInformation: Object {
-    dynamic var address: EnvelopeAddress?
+    dynamic var address: EnvelopeAddress? = EnvelopeAddress()
     dynamic var name: String = ""
-    dynamic var isOrganization: Bool = false
+    dynamic var isOrganization: Bool = true
 }
 
 class EnvelopeDate: Object {
@@ -35,9 +36,9 @@ class EnvelopeAddress: Object {
     dynamic var prefecture: String = ""
     dynamic var city: String = ""
     dynamic var region: String = ""
-    dynamic var number1: Int = 0
-    dynamic var number2: Int = 0
-    dynamic var number3: Int = 0
-    dynamic var building: String = ""
-    dynamic var roomNumber: Int = 0
+    dynamic var number1: Int?
+    dynamic var number2: Int?
+    dynamic var number3: Int?
+    dynamic var building: String?
+    dynamic var roomNumber: Int?
 }

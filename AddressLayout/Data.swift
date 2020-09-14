@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-let testLogData: [Log] = load("testLogData.json")
+//let testLogData: [Log] = load("testLogData.json")
 let envelopeData: [Envelope] = load("envelopeData.json")
 
 //JSONを読み込むための関数

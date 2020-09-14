@@ -35,7 +35,7 @@ struct PreviewView: View {
                     ZStack{
                         ActualSizeEnvelopeView(envelopeTypeViewModel: self.envelopeTypeViewModel).opacity(self.isActualDisplay ? 1.0 : 0.0)
                             
-                        InputView(address: testLogData[0].sender.address).opacity(self.isActualDisplay ? 0.0 : 1.0)
+//                        InputView(address: testLogData[0].sender.address).opacity(self.isActualDisplay ? 0.0 : 1.0)
                     }
                     
 // MARK: - 封筒サイズ変更ボタンと共有ボタン
@@ -78,7 +78,6 @@ struct PreviewView: View {
 struct PreviewView_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(["iPhone SE (2nd generation)", "iPhone 11"], id: \.self) { deviceName in
-//            PreviewView(logData: testLogData[0])  // テスト用
             PreviewView(currentEnvelopeData: EnvelopeDataViewModel())
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
