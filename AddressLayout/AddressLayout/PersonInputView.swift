@@ -9,10 +9,8 @@
 import SwiftUI
 
 struct PersonInputView: View {
-    @Binding var name: String
-    @Binding var lastname: String
-    @Binding var firstname: String
-    @Binding var isOrganization: Bool
+    
+    @ObservedObject var information: InformationViewModel
     
     var a = true
     var body: some View {
@@ -20,26 +18,27 @@ struct PersonInputView: View {
             HStack{
                 Text("宛名")
                 Spacer()
-                Picker(selection: self.$isOrganization, label: Text("")){
+                Picker(selection: self.$information.information.isOrganization, label: Text("")){
                     Text("個人")
-                        .tag(true)
-                    Text("組織")
                         .tag(false)
+                    Text("組織")
+                        .tag(true)
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .frame(width: 100)
             }
             HStack {
-                if self.isOrganization {
-                    TextField("姓/Last name", text: $lastname)
+                if self.information.information.isOrganization {
+                    TextField("宛名/name", text: $information.information.name)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                    TextField("名/First name", text: $firstname)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
                 }else{
-                    TextField("宛名/name", text: $name)
+                    TextField("姓/Last name", text: $information.lastname)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    TextField("名/First name", text: $information.firstname)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
-
+                
             }
         }
         .frame(maxWidth: 300, maxHeight: 100)
@@ -49,7 +48,7 @@ struct PersonInputView: View {
 
 struct PersonInputView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonInputView(name: .constant(""), lastname: .constant(""), firstname: .constant(""), isOrganization: .constant(false))
+        PersonInputView(information: EnvelopeDataViewModel().senderInformationVM)
             .previewLayout(.fixed(width: 350, height: 200))
     }
 }

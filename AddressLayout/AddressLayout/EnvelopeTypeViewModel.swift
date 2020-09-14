@@ -23,7 +23,4 @@ final class EnvelopeTypeViewModel: ObservableObject {
         self.envelopes = envelopeTypes
         self.selectedId = selectedId
     }
-    
-    
-    
 }

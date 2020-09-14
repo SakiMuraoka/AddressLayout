@@ -18,19 +18,16 @@ struct InputView: View {
     @State var number3str: String = ""
     @State var building: String = ""
     @State var roomNumberstr: String = ""
-    
     @State var zipcode: String = ""
-    
     @State var name: String = ""
     @State var lastname: String = ""
     @State var firstname: String = ""
     @State var isOrganization: Bool = true
-    
-    @State var address: Address
+    @ObservedObject var information: InformationViewModel
     
     var body: some View {
         VStack{
-            PersonInputView(name: $name, lastname: $lastname, firstname: $firstname, isOrganization: $isOrganization)
+            PersonInputView(information: information)
             ZipInputView(zipcode: $zipcode)
             AddressInputView(prefecture: $prefecture, city: $city, region: $region, number1str: $number1str, number2str: $number2str, number3str: $number3str, building: $building, roomNumberstr: $roomNumberstr)
             HStack{
@@ -52,28 +49,30 @@ struct InputView: View {
                     newEnvelopeInfo.name    = self.name
                     newEnvelopeInfo.isOrganization   = self.isOrganization
                     
-                    let newEnvelopeDate = EnvelopeDate()
-                    newEnvelopeDate.date  = 14
-                    newEnvelopeDate.month = 9
-                    newEnvelopeDate.year  = 2020
+                    self.information.setup(information: newEnvelopeInfo)
                     
-                    let newEnvelopeData = EnvelopeData()
-                    newEnvelopeData.id               = 0
-                    newEnvelopeData.receiver         = newEnvelopeInfo
-                    newEnvelopeData.sender           = nil
-                    newEnvelopeData.envelopeTypeId   = 0
-                    newEnvelopeData.dates            = newEnvelopeDate
+//                    let newEnvelopeDate = EnvelopeDate()
+//                    newEnvelopeDate.date  = 14
+//                    newEnvelopeDate.month = 9
+//                    newEnvelopeDate.year  = 2020
+//
+//                    let newEnvelopeData = EnvelopeData()
+//                    newEnvelopeData.id               = 0
+//                    newEnvelopeData.receiver         = newEnvelopeInfo
+//                    newEnvelopeData.sender           = nil
+//                    newEnvelopeData.envelopeTypeId   = 0
+//                    newEnvelopeData.dates            = newEnvelopeDate
                     
-                    let realm = try? Realm()
-                    try? realm?.write{
-                        realm?.add(newEnvelopeData)
-                        print(newEnvelopeData)
-                    }
+//                    let realm = try? Realm()
+//                    try? realm?.write{
+//                        realm?.add(newEnvelopeData)
+//                        print(newEnvelopeData)
+//                    }
                     
                     // デバッグ用
-                    let results = realm?.objects(EnvelopeData.self)
-                    print(results ?? "null")
-                    print(newEnvelopeAddress.number1)
+//                    let results = realm?.objects(EnvelopeData.self)
+//                    print(results ?? "null")
+//                    print(newEnvelopeAddress.number1)
                 }) {
                     Text("完了")
                         .font(.callout)
@@ -94,6 +93,6 @@ struct InputView: View {
 
 struct InputView_Previews: PreviewProvider {
     static var previews: some View {
-        InputView(address: testLogData[0].sender.address)
+        InputView(information: EnvelopeDataViewModel().senderInformationVM)
     }
 }
